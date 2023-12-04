@@ -16,13 +16,14 @@ import ImageSlider from "../components/layout/imageSlider";
 // import image3 from "../images/1113.jpg";
 // import image4 from "../images/1114.jpg";
 
-import img1 from "../image/1111.jpg"
-import img2 from "../image/1112.jpg"
-import img3 from "../image/1113.jpg"
-import img4 from "../image/1114.jpg"
-import img5 from "../image/1115.jpg"
+import img1 from "../image/1111.jpg";
+import img2 from "../image/1112.jpg";
+import img3 from "../image/1113.jpg";
+import img4 from "../image/1114.jpg";
+import img5 from "../image/1115.jpg";
+import img6 from "../image/1116.jpg";
 
-const images = [img1,img2,img3,img4,img5];
+const images = [img1, img2, img3, img4, img5, img6];
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -126,8 +127,12 @@ const HomePage = () => {
   return (
     <Layout title={"All Products"}>
       <div className="App">
-      <ImageSlider images={images} interval={5000} width="100%" height="600px" />
-
+        <ImageSlider
+          images={images}
+          interval={5000}
+          width="100%"
+          height="600px"
+        />
       </div>
       <div className="container-fluid row">
         <div className="row mt-2">
