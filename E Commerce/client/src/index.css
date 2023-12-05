@@ -20,7 +20,7 @@
 
 main {
   /* background-color: #f2f2f2; */
-  background: linear-gradient(300deg, #575757, #070606, #232323);
+  background: linear-gradient(300deg, #ffffff, #fe13fe);
   background-size: 180% 180%;
   animation: gradient-animation 18s ease infinite;
   /* padding-top: 20px; */
