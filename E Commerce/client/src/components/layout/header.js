@@ -62,14 +62,14 @@ const Header = () => {
                   className="logo-font"
                   style={{
                     color: "white",
-                    fontSize: "27px",
+                    fontSize: "35px",
                     fontFamily: "lost-treasure",
                     cursor: "pointer",
                     marginRight: "30px",
                     marginLeft: "20px",
                   }}
                 >
-                  Rohini Helmets
+                  Artysly
                 </span>
               </NavLink>
             </div>

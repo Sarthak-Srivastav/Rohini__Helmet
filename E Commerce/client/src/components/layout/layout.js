@@ -25,9 +25,9 @@ const Layout = ({ children, title, description, keywords, author }) => {
 };
 
 Layout.defaultProps = {
-  title: "Helmets",
-  description: "Helmets and other bike accesories",
-  keywords: "mern,react,node,express,react,helmets,bike",
-  author: "Rohini Helmet",
+  title: "Artysly",
+  description: "Artysly a place where you can find every art supply",
+  keywords: "mern, react, node, express, react, paint, art",
+  author: "Artysly",
 };
 export default Layout;

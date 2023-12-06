@@ -247,6 +247,7 @@ const HomePage = () => {
                       className="product-image"
                       src={`/api/v1/product/product-photo/${p._id}`}
                       alt="Product Image"
+                      onClick={() => navigate(`/product/${p.slug}`)}
                     />
                   </div>
                   {/* </div> */}
@@ -261,12 +262,12 @@ const HomePage = () => {
                     </p>
                   </div>
                   <div className="buttons-container">
-                    <button
+                    {/* <button
                       className="button"
                       onClick={() => navigate(`/product/${p.slug}`)}
                     >
                       More Details
-                    </button>
+                    </button> */}
                     <button
                       className="button"
                       onClick={() => {

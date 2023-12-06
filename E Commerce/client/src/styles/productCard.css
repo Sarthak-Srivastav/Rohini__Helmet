@@ -101,12 +101,13 @@
   width: 100%;
   padding: 35px;
   /* border: 1px solid rgb(92, 92, 92); */
-  background: #181a1b;
+  background: #ffffff;
   height: auto; /* Adjust the height to fit the container */
   transition: transform 0.3s ease;
   object-fit: cover; /* Maintain aspect ratio and cover the container */
   border-radius: 30px; /* Rounded corners on all sides in default state */
   z-index: 1;
+  cursor: pointer;
 }
 
 .product-image:hover {
@@ -132,7 +133,7 @@
 
 .product-description {
   font-size: 1rem;
-  color: #f80808;
+  color: #737373;
   /* text-align: center; */
   margin-bottom: 15px;
   font-weight: bold; /* Set font weight to bold */
@@ -159,18 +160,25 @@
   font-family: "Montserrat", sans-serif;
   font-weight: bold; /* Set font weight to bold */
   /* border: 2px solid rgb(92, 92, 92); */
-  border-radius: 30px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  background: rgba(0, 0, 0, 0.064);
-  backdrop-filter: blur(5px);
   width: 330px;
   margin: 20px;
-  border: 1px solid rgba(219, 35, 25, 0.903);
-
-
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.064);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.903);
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; */
+
+
+
+  color: #fff;
+  word-wrap: break-word;
+  background: rgba(0, 0, 0, 0.237);
+  background-clip: border-box;
+  border: 2px solid #b9b9b9;
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
 }
 
 .card-1:hover {
@@ -190,7 +198,7 @@
 
 .product-price {
   font-size: 1.3rem;
-  color: #ff0019;
+  color: #ffbf00;
   text-align: center;
   margin-bottom: 15px;
   font-weight: bold; /* Set font weight to bold */
@@ -198,7 +206,7 @@
 
 .buttons-container {
   display: flex;
-  justify-content: space-around;
+  justify-content:center;
   /* background: linear-gradient(270deg, #171754, #070606, #000000); */
   /* background: linear-gradient(300deg, #6f5200, #070606);  */
   align-items: center;
@@ -213,16 +221,16 @@
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: bold; /* Set font weight to bold */
   transition: background-color 0.3s ease;
-  width: 120px;
+  width: 230px;
   height: 45px;
 }
 
 .button:hover {
   /* background-color: #7cb6fc; */
-  background: linear-gradient(150deg, #ffa0a0, #ff6565);
+  background: linear-gradient(150deg, #ffa0a0, #ad3ffc);
 }
 
 .product-name-h4 {

@@ -84,7 +84,7 @@ font-family: 'Roboto Slab', serif; */
   line-height: 26px;
   /* background-color: black; */
   padding: 15px 20px;
-  background: linear-gradient(300deg, #4a0707, #070606, #232323);
+  background: linear-gradient(300deg, #3c0185, #070606, #232323);
   background-size: 180% 180%;
   animation: gradient-animation 20s ease infinite;
   box-shadow: 0 2px 4px;
@@ -146,7 +146,7 @@ button.navbar-toggler {
 
 .nav-link {
   text-decoration: none;
-  color: #ff0000;
+  color: #ffe8e8;
   font-weight: 600;
   transition: color 0.3s;
 }
@@ -157,11 +157,11 @@ button.navbar-toggler {
   color: rgb(255, 70, 215);
 }
 .navbar-nav .nav-link.active {
-  color: #bcbcbc;
+  color: #ad3ffc;
 }
 .nav-link-2 {
   text-decoration: none;
-  color: #ff0000;
+  color: #fefefe;
   font-weight: 600;
   transition: color 0.3s;
 }
@@ -186,7 +186,7 @@ button.navbar-toggler {
 .dropdown-item:hover {
   width: 100%;
   background-color: transparent;
-  color: #ffa601;
+  color: #ff00d9;
 }
 
 /* .navbar-nav .nav-link.active{
