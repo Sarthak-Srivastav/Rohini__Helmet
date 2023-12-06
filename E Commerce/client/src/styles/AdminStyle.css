@@ -68,7 +68,7 @@
 }
 .list-group-item.active {
     color: #000000;
-    background: #0358ae !important;
+    background: #860092 !important;
     background-clip: border-box;
     color: #fff;
     border: none;
@@ -105,7 +105,7 @@
     /* background-color: rgba(255, 0, 0, 0.728); */
     background-image: initial;
     /* background-color: rgb(12, 19, 60); */
-    background: linear-gradient(130deg,rgba(5, 19, 54, 0.661),rgba(16, 20, 30, 0.661)) ;
+    background: linear-gradient(130deg,rgba(38, 0, 79, 0.661),rgba(16, 20, 30, 0.661)) ;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(15.6px);
     border: 1px solid rgba(89, 89, 89, 0.822);

@@ -49,9 +49,8 @@ section .color {
   position: absolute;
   backdrop-filter: blur(5px);
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(219, 35, 25, 0.903);
-  border-right: 1px solid rgba(219, 35, 25, 0.903);
-  border-bottom: 1px solid rgba(219, 35, 25, 0.903);
+  border: 1px solid #590397;
+
   background: rgba(47, 47, 47, 0.192);
   border-radius: 10px;
   animation: animate 10s linear infinite;
@@ -115,7 +114,7 @@ section .color {
   backdrop-filter: blur(5px);
   /* box-shadow: 0 25px 45px rgba(0, 0, 0, 0.676); */ 
   box-shadow: 0 25px 45px rgba(255, 253, 253, 0.1);
-  border: 1px solid rgba(219, 35, 25, 0.903);
+  border: 1px solid rgb(174, 64, 252)
 }
 .form {
   position: relative;
@@ -139,7 +138,7 @@ section .color {
   bottom: -10px;
   width: 80px;
   height: 4px;
-  background: linear-gradient(135deg, #fe0707, #ffffff);
+  background: linear-gradient(135deg, #fe07ac, #ffffff);
 }
 .form .inputBox {
   width: 100%;
@@ -147,12 +146,12 @@ section .color {
 }
 .form .inputBox input {
   width: 100%;
-  background: rgba(241, 83, 83, 0.903);
+  background: rgb(174, 64, 252);
   border: none;
   outline: none;
   padding: 10px 20px;
   border-radius: 35px;
-  border: 1px solid rgba(219, 35, 25, 0.903);
+  border: 1px solid #ad3ffc;
   /* border-right: 1px solid rgba(219, 35, 25, 0.903);
   border-bottom: 1px solid rgba(219, 35, 25, 0.903); */
   font-size: 16px;
@@ -166,7 +165,7 @@ section .color {
 }
 .form .inputBox input[type="submit"] {
   background: #fff;
-  color: #f15353e6;
+  color: #ad3ffc;
   max-width: 100px;
   cursor: pointer;
   margin-bottom: 20px;

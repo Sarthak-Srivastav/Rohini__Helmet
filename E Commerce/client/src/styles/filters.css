@@ -65,13 +65,13 @@
 }
 
 .ant-radio-checked .ant-radio-inner {
-  border-color: rgba(219, 35, 25, 0.903) !important ;
-  background-color: rgba(219, 35, 25, 0.903) !important;
+  border-color: rgba(154, 25, 219, 0.903) !important ;
+  background-color: rgba(151, 25, 219, 0.903) !important;
 }
 
 .btn-danger{
   background-color:transparent;
   font-size: large;
   font-weight: 400;
-  border: 4px solid #f39c12!important;
+  border: 4px solid #ad3ffc!important;
 }

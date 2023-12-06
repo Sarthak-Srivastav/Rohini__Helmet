@@ -379,8 +379,8 @@ img {
   border-width: 5px;
   border-image-source: linear-gradient(
     to left,
-    #0c356a,
-    #26c4ca
+    #330183,
+    #8100a4
   ); /* gradient textbox color */
 }
 /* outline border of textarea  */

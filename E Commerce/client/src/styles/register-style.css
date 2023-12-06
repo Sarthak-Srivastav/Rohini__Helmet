@@ -110,9 +110,7 @@ section .color {
   backdrop-filter: blur(5px);
   /* box-shadow: 0 25px 45px rgba(0, 0, 0, 0.676); */
   box-shadow: 0 25px 45px rgba(255, 253, 253, 0.1);
-  border: 1px solid rgba(219, 35, 25, 0.903);
-  border-right: 1px solid rgba(219, 35, 25, 0.903);
-  border-bottom: 1px solid rgba(219, 35, 25, 0.903);
+  border: 1px solid rgb(173, 63, 252);
 }
 .form {
   position: relative;
