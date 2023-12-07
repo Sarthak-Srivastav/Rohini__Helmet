@@ -8,62 +8,60 @@ const Policy = () => {
       <div className="policy-content">
       <h1 id="policy-head">Privacy Policy</h1>
 
+    <p>Welcome to Artisly! We are delighted to serve you as your go-to destination for art supplies. Please take a moment to review our store policies.</p>
 
-<h3>Introduction</h3>
+    <h2> Ordering and Payment:</h2>
+    <p> <strong>Ordering:</strong> All orders are subject to availability. We reserve the right to cancel or limit the quantity of any order.</p>
 
-<p>Welcome to Rohini Helmets. At Rohini Helmets, we are committed to protecting your privacy and providing a secure online shopping experience. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal information when you use our website or services.</p>
+    <p> <strong>Payment:</strong> We accept Paypal, Paytm etc.</p>
 
-<p>By accessing or using our website or services, you consent to the practices described in this Privacy Policy. If you do not agree with the practices described here, please do not use our website or services.</p>
+    <h2> Shipping:</h2>
+    <p> <strong>Processing Time:</strong> Orders are typically processed within 5 business days. Custom or back-ordered items may require additional processing time.</p>
 
-<h3>Information We Collect</h3>
+    <p> <strong>Shipping Methods:</strong> We offer various shipping options, including [List of Shipping Methods]. Shipping costs are calculated at checkout.</p>
 
-<p>Personal Information: We may collect personal information, such as your name, email address, shipping address, billing address, phone number, and payment information when you place an order or create an account on our website.</p>
+    <p> <strong>International Shipping:</strong> We provide international shipping. Please note that additional customs duties and taxes may apply, and customers are responsible for these fees.</p>
 
-<p>Usage Information: We may collect non-personal information about your use of our website, including your IP address, browser type, operating system, and browsing behavior. We may use cookies, web beacons, and similar technologies to collect this information.</p>
+    <h2> Returns and Exchanges:</h2>
+    <p> <strong>Returns:</strong> We accept returns within 7 days of receiving your order. The item must be in its original condition and packaging.</p>
 
-<h3>How We Use Your Information</h3>
+    <p> <strong>Exchanges:</strong> Exchanges are available for defective or damaged items. Please contact us within 7 days of receiving the product.</p>
 
-<p>We use the information we collect for various purposes, including but not limited to:</p>
+    <p> <strong>Return Shipping:</strong> Customers are responsible for return shipping costs unless the return is due to our error.</p>
 
-<p>Order Processing: To process and fulfill your orders, including sending order confirmations and shipping notifications.</p>
+    <h2> Refunds:</h2>
+    <p> <strong>Refund Process:</strong> Refunds are processed within 7 days of receiving the returned item.</p>
 
-<p>Customer Support: To provide customer support and respond to your inquiries.</p>
+    <p> <strong>Refund Method:</strong> Refunds are issued through the original payment method.</p>
 
-<p>Marketing: To send promotional offers, newsletters, and updates about our products and services if you have opted to receive such communications. You can opt out of these communications at any time.</p>
+    <h2> Product Information:</h2>
+    <p> <strong>Accuracy:</strong> We strive to provide accurate product descriptions and images. However, slight variations may occur.</p>
 
-<p>Improvement: To improve our website, products, and services based on user feedback and usage patterns.</p>
+    <p> <strong>Out of Stock Items:</strong> In the event that an item is out of stock, we will notify you promptly and offer alternatives or a refund.</p>
 
-<h3>Disclosure of Your Information</h3>
+    <h2> Privacy and Security:</h2>
+    <p> <strong>Data Collection:</strong> We collect and store customer information securely.</p>
 
-<p>We may share your personal information with third parties in the following circumstances:</p>
+    <p> <strong>Security:</strong> Our website employs industry-standard security measures to protect your information.</p>
 
-<p>Service Providers: We may share your information with trusted third-party service providers who assist us in operating our website, processing orders, and delivering products.</p>
+    <h2> Customer Support:</h2>
+    <p> <strong>Contact Information:</strong> For assistance, contact our customer support at Artysly_paint@gmail.com or 097714 99948.</p>
 
-<p>Legal Compliance: We may disclose your information if required by law or in response to a legal request.</p>
+    <p> <strong>Office Hours:</strong> Our customer support operates during 097714 99948.</p>
 
-<p>Business Transfers: In the event of a merger, acquisition, or sale of all or part of our company, your information may be transferred to the acquiring entity.</p>
+    <h2> Promotions and Discounts:</h2>
+    <p> <strong>Promotional Offers:</strong> From time to time, we may offer promotions or discounts. Terms and conditions apply.</p>
 
-<h3>Data Security</h3>
+    <p> <strong>Coupon Codes:</strong> Coupon codes must be entered at checkout. They are subject to expiration dates and other limitations.</p>
 
-<p>We implement reasonable security measures to protect your personal information. However, no data transmission over the internet can be guaranteed to be 100% secure. While we strive to protect your information, we cannot guarantee the security of any information you transmit to us.</p>
+    <h2> Terms of Service:</h2>
+    <p> <strong>Acceptance:</strong> By placing an order, you agree to our Terms of Service.</p>
 
-<h3>Your Choices</h3>
 
-<p>You have choices regarding your personal information:</p>
+    <p>Thank you for shopping with Artysly! We appreciate your business.</p>
 
-<p>Access and Correction: You may access and update your personal information by logging into your account.</p>
+    <h3>Artysly</h3>
 
-<p>Opting Out: You can opt out of receiving marketing communications from us by following the instructions provided in our communications or by contacting us.</p>
-
-<h3>Changes to This Privacy Policy</h3>
-
-<p>We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. We encourage you to review this Privacy Policy periodically to stay informed about our data practices.</p>
-
-<h3>Contact Us</h3>
-
-<p>If you have any questions or concerns about this Privacy Policy, please contact us at 098914 08448.</p>
-
-<p>Please remember that this is a generic privacy policy template, and you should consult with a legal professional to ensure that it complies with the specific laws and regulations applicable to your e-commerce business and the jurisdictions in which you operate. Additionally, you should update the document as needed to reflect any changes in your data practices.</p>
     </div>
     </div>
     </Layout>
