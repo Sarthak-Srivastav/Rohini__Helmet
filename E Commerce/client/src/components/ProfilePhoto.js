@@ -7,7 +7,6 @@ const ProfilePhoto = ({ userId }) => {
     // You can fetch the user's profile photo using the userId and display it here
     const profilePhotoUrl = `URL_TO_FETCH_PROFILE_PHOTO/${userId}`;
 
-
   const onDrop = async (acceptedFiles) => {
     const file = acceptedFiles[0];
     const formData = new FormData();
