@@ -137,7 +137,27 @@
   /* text-align: center; */
   margin-bottom: 15px;
   font-weight: bold; /* Set font weight to bold */
+  overflow: hidden;
 }
+
+.product-description {
+  font-size: 1rem;
+  color: #737373;
+  margin-bottom: 15px;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.moreproduct-description span {
+  display: none;
+}
+
+.comment {
+  width: 400px;
+  background-color: #f0f0f0;
+  margin: 10px;
+}
+
 
 .btn-secondary {
   --bs-btn-color: #fff;

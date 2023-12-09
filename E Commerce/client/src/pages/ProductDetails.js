@@ -12,16 +12,16 @@ const ProductDetails = () => {
   const params = useParams();
   const [product, setProduct] = useState({});
   const [relatedProducts, setRelatedProducts] = useState([]);
+  const [showMore, setShowMore] = useState(false);
 
   const scrollToTop = () => {
     window.scrollTo(0, 0); // Scroll to the top of the page
   };
 
-  //initial product details
   useEffect(() => {
     if (params?.slug) getProduct();
   }, [params?.slug]);
-  //get product
+
   const getProduct = async () => {
     try {
       const { data } = await axios.get(
@@ -34,7 +34,6 @@ const ProductDetails = () => {
     }
   };
 
-  //get similar product
   const getSimilarProduct = async (pid, cid) => {
     try {
       const { data } = await axios.get(
@@ -45,9 +44,14 @@ const ProductDetails = () => {
       console.log(error);
     }
   };
+
+  const toggleDescription = () => {
+    setShowMore(!showMore);
+  };
+
   return (
     <Layout>
-      <div class="specific-page-background">
+      <div className="specific-page-background">
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-5 detail-box">
@@ -75,7 +79,7 @@ const ProductDetails = () => {
             </div>
           </div>
         </div>
-        <hr />
+        <hr/>
 
         <div>
           <h3 className="text-center">Similar Products</h3>
@@ -85,7 +89,7 @@ const ProductDetails = () => {
 
           <div className="d-flex flex-wrap justify-content-around">
             {relatedProducts?.map((p) => (
-              <div className={"card-1"} key={p._id}>
+              <div className="card-1" key={p._id}>
                 <div className="product-image-container">
                   <img
                     className="product-image"
@@ -96,9 +100,12 @@ const ProductDetails = () => {
                 </div>
                 <div className="product-details">
                   <h3 className="product-name">{p.name}</h3>
-                  <p className="product-description">
-                    {p.description.substring(0, 30)}...
+                  <p className={`product-description ${showMore ? "more" : ""}`}>
+                    {p.description}
                   </p>
+                  <button className="btn btn-link" onClick={toggleDescription}>
+                    {showMore ? "See Less" : "See More"}
+                  </button>
                   <p className="product-price">₹ {p.price}</p>
                 </div>
                 <div className="buttons-container">
