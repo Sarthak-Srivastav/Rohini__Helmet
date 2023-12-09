@@ -41,8 +41,8 @@
 
 .custom-radio input[type="radio"]:checked,
 .ant-checkbox-checked .ant-checkbox-inner {
-  background-color: rgba(219, 35, 25, 0.903); /* Set checked background color */
-  border-color: rgba(219, 35, 25, 0.903); /* Set checked border color */
+  background-color: rgba(200, 91, 255, 0.903); /* Set checked background color */
+  border-color: rgba(170, 0, 255, 0.903); /* Set checked border color */
 }
 
 .custom-radio,
