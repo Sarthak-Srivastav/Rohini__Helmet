@@ -91,6 +91,7 @@ const ProductDetails = () => {
                     className="product-image"
                     src={`/api/v1/product/product-photo/${p?._id}`}
                     alt="Product Image"
+                    onClick={() => navigate(`/product/${p.slug}`)}
                   />
                 </div>
                 <div className="product-details">
@@ -101,15 +102,6 @@ const ProductDetails = () => {
                   <p className="product-price">₹ {p.price}</p>
                 </div>
                 <div className="buttons-container">
-                  <button
-                    className="button"
-                    onClick={() => {
-                      navigate(`/product/${p.slug}`);
-                      scrollToTop();
-                    }}
-                  >
-                    More Details
-                  </button>
                   <button
                     className="button"
                     onClick={() => {

@@ -105,7 +105,7 @@ section .color {
 .container-1 {
   position: relative;
   width: 360px;
-  max-height: 430px;
+  max-height: fit-content;
   background: rgba(0, 0, 0, 0.064);
   border-radius: 10px;
   display: flex;
@@ -186,4 +186,3 @@ section .color {
   color: #fff;
   font-weight: 600;
 }
-

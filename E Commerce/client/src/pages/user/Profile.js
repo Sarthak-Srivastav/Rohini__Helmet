@@ -4,17 +4,20 @@ import UserMenu from "./../../components/layout/UserMenu";
 import Layout from "../../components/layout/layout";
 import axios from "axios";
 import { toast } from "react-hot-toast";
+import ProfilePhoto from '../../components/ProfilePhoto'; 
 import "../../styles/register-style.css";
 
 const Profile = () => {
   //context
   const [auth, setAuth] = useAuth();
-  //state
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
+//state
+const [name, setName] = useState("");
+const [profilephoto, setProfilePhoto] = useState("");
+const [email, setEmail] = useState("");
+const [password, setPassword] = useState("");
+const [phone, setPhone] = useState("");
+const [address, setAddress] = useState("");
+
 
   //get user data
   useEffect(() => {
@@ -29,13 +32,21 @@ const Profile = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.put("/api/v1/auth/profile", {
-        name,
-        email,
-        password,
-        phone,
-        address,
+      // Update the API endpoint to handle profile photo upload
+      const formData = new FormData();
+      formData.append('name', name);
+      formData.append('email', email);
+      formData.append('password', password);
+      formData.append('phone', phone);
+      formData.append('address', address);
+      formData.append('profilephoto', profilephoto); // Add profile photo to FormData
+
+      const { data } = await axios.put('/api/v1/auth/profile', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
       });
+
       if (data?.error) {
         toast.error("data?.error");
       } else {
@@ -94,6 +105,16 @@ const Profile = () => {
                             autoComplete="off"
                           />
                         </div>
+
+                        <div className="inputBox">
+                          <input
+                            type="file"
+                            value={profilephoto}
+                            accept="image/*"
+                            onChange={(e) => setProfilePhoto(e.target.files[0])}
+                          />
+                        </div>
+
                         <div className="inputBox">
                           <input
                             type="email"

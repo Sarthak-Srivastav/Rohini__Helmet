@@ -45,18 +45,7 @@ section .color {
 .box {
   position: relative;
 }
-.box .square {
-  position: absolute;
-  backdrop-filter: blur(5px);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(219, 35, 25, 0.903);
-  border-right: 1px solid rgba(219, 35, 25, 0.903);
-  border-bottom: 1px solid rgba(219, 35, 25, 0.903);
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  animation: animate 10s linear infinite;
-  animation-delay: calc(-1s * var(--i));
-}
+
 @keyframes animate {
   0%,
   100% {
@@ -100,8 +89,8 @@ section .color {
 }
 .container-register {
   position: relative;
-  width: 360px;
-  max-height: 570px;
+  width: fit-content;
+  max-height: fit-content;
   background: rgba(0, 0, 0, 0.064);
   border-radius: 10px;
   display: flex;
@@ -147,8 +136,6 @@ section .color {
   padding: 10px 20px;
   border-radius: 35px;
   border: 1px solid rgba(219, 35, 25, 0.903);
-  border-right: 1px solid rgba(219, 35, 25, 0.903);
-  border-bottom: 1px solid rgba(219, 35, 25, 0.903);
   font-size: 16px;
   letter-spacing: 1px;
   color: #fff;
@@ -173,4 +160,3 @@ font-weight: 600;
   margin-bottom: 20px;
   font-weight: 700;
 }
-
