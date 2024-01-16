@@ -123,7 +123,7 @@ const CartPage = () => {
             ))}
           </div>
           <div className="col-md-4 text-center p-2">
-            <h2>Cart Summary</h2>
+            <h2 className="summary">Cart Summary</h2>
             <h6>Total |Checkut |Payment</h6>
             <hr />
             <h4>Total : {totalPrice()}</h4>

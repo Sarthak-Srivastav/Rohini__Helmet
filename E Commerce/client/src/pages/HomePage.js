@@ -1,20 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Layout from "../components/layout/layout";
 import { useAuth } from "../context/Auth";
-import axios from "axios";
-import { Checkbox, Radio } from "antd";
+import { Checkbox, Radio, Spin } from "antd";
 import { prices } from "../components/prices";
-import "../styles/productCard.css";
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/cart";
 import { toast } from "react-hot-toast";
 import "../styles/filters.css";
 import ImageSlider from "../components/layout/imageSlider";
-
-// import image1 from "";
-// import image2 from "../images/1112.jpg";
-// import image3 from "../images/1113.jpg";
-// import image4 from "../images/1114.jpg";
+import axios from "axios";
 
 import img1 from "../image/1111.jpg";
 import img2 from "../image/1112.jpg";
@@ -22,22 +16,26 @@ import img3 from "../image/1113.jpg";
 import img4 from "../image/1114.jpg";
 import img5 from "../image/1115.jpg";
 import img6 from "../image/1116.jpg";
+import img7 from "../image/1117.jpg";
+import img8 from "../image/1118.jpg";
 
-const images = [img1, img2, img3, img4, img5, img6];
+const images = [img1, img2, img3, img4, img5, img6, img7 ,img8];
 
 const HomePage = () => {
   const navigate = useNavigate();
   const [cart, setCart] = useCart();
-  const [auth, setAuth] = useAuth();
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [checked, setChecked] = useState([]);
   const [radio, setRadio] = useState([]);
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
-  const [loading, setLoading] = useState(1);
+  const [loading, setLoading] = useState(false);
+  const [loadingMore, setLoadingMore] = useState(false);
+  const [expandedDescriptions, setExpandedDescriptions] = useState({});
 
-  // get all category
+  const observer = useRef(null);
+
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get("/api/v1/category/get-category");
@@ -52,8 +50,26 @@ const HomePage = () => {
   useEffect(() => {
     getAllCategory();
     getTotal();
+    getAllProducts();
+    // Create an Intersection Observer
+    observer.current = new IntersectionObserver(
+      (entries) => {
+        const lastEntry = entries[0];
+        if (lastEntry.isIntersecting && !loadingMore) {
+          setPage((prevPage) => prevPage + 1);
+        }
+      },
+      { threshold: 1 }
+    );
   }, []);
-  //get products
+
+  const toggleDescriptionExpansion = (productId) => {
+    setExpandedDescriptions((prevExpanded) => ({
+      ...prevExpanded,
+      [productId]: !prevExpanded[productId],
+    }));
+  };
+
   const getAllProducts = async () => {
     try {
       setLoading(true);
@@ -66,7 +82,6 @@ const HomePage = () => {
     }
   };
 
-  //get Total Count
   const getTotal = async () => {
     try {
       const { data } = await axios.get("/api/v1/product/product-count");
@@ -81,20 +96,18 @@ const HomePage = () => {
     loadMore();
   }, [page]);
 
-  //load more
   const loadMore = async () => {
     try {
-      setLoading(true);
+      setLoadingMore(true);
       const { data } = await axios.get(`/api/v1/product/product-list/${page}`);
-      setLoading(false);
+      setLoadingMore(false);
       setProducts([...products, ...data?.products]);
     } catch (error) {
       console.log(error);
-      setLoading(false);
+      setLoadingMore(false);
     }
   };
 
-  // filter by category
   const handleFilter = (value, id) => {
     let all = [...checked];
     if (value) {
@@ -104,6 +117,7 @@ const HomePage = () => {
     }
     setChecked(all);
   };
+
   useEffect(() => {
     if (!checked.length || !radio.length) getAllProducts();
   }, [checked.length, radio.length]);
@@ -112,7 +126,6 @@ const HomePage = () => {
     if (checked.length || radio.length) filterProduct();
   }, [checked, radio]);
 
-  //get filterd product
   const filterProduct = async () => {
     try {
       const { data } = await axios.post("/api/v1/product/product-filters", {
@@ -124,46 +137,15 @@ const HomePage = () => {
       console.log(error);
     }
   };
+
   return (
     <Layout title={"All Products"}>
       <div className="App">
-        <ImageSlider
-          images={images}
-          interval={5000}
-          width="100%"
-          height="600px"
-        />
+        <ImageSlider images={images} interval={5000} width="100%" height="600px" />
       </div>
       <div className="container-fluid row">
         <div className="row mt-2">
           <div className="col-md-2">
-            {/* category filter  */}
-            {/* <h4 className="text-center">Filter by category</h4>
-            <div className="d-flex flex-column">
-              {categories?.map((c) => (
-                <Checkbox
-                  key={c._id}
-                  onChange={(e) => handleFilter(e.target.checked, c._id)}
-                >
-                  {c.name}
-                </Checkbox>
-              ))}
-            </div> */}
-
-            {/* price filter */}
-            {/* <div className="price-filter-container">
-              <h4 className="filter-heading">Filter by price</h4>
-              <div className="radio-group-container">
-                <Radio.Group onChange={(e) => setRadio(e.target.value)}>
-                  {prices?.map((p) => (
-                    <div key={p._id} className="radio-item">
-                      <Radio value={p.array} className="custom-radio">{p.name}</Radio>
-                    </div>
-                  ))}
-                </Radio.Group>
-              </div>
-            </div> */}
-
             <div className="filter-container">
               <div className="filter-section">
                 <h4 className="filter-heading">Filter by category</h4>
@@ -195,7 +177,6 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-
             <div className="d-flex flex-column">
               <button
                 className="btn btn-danger"
@@ -206,43 +187,14 @@ const HomePage = () => {
             </div>
           </div>
 
-          {/* <div className="d-flex flex-wrap">
-              {products?.map((p) => (
-                <div
-                  className="card m-2"
-                  style={{ width: "18rem" }}
-                  key={p._id}
-                >
-                  <img
-                    src={`/api/v1/product/product-photo/${p._id}`}
-                    className="card-img-top"
-                    alt={p.name}
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">{p.name}</h5>
-                    <p className="card-text">
-                      {p.description.substring(0, 30)}...
-                    </p>
-                    <p className="card-text">₹ {p.price}</p>
-                    <button className="btn btn-primary ms-2">
-                      More Details
-                    </button>
-                    <button className="btn btn-secondary ms-2">
-                      Add to cart
-                    </button>
-                  </div>
-                </div>
-              ))}
-
-            </div> */}
-
           <div className="col-md-10 pl-5 ">
-            <h1 className="home-text-center">All Products</h1>
+            <span className="home-text-center" style={{ fontFamily: "trail-font" }}>
+              All Products
+            </span>
             <div className="d-flex flex-wrap justify-content-around">
-              {products?.map((p) => (
+              {products?.map((p, index) => (
                 <div className={"card-1"} key={p._id}>
                   <div className="product-image-container">
-                    {/* <div className="shape"> */}
                     <img
                       className="product-image"
                       src={`/api/v1/product/product-photo/${p._id}`}
@@ -250,24 +202,29 @@ const HomePage = () => {
                       onClick={() => navigate(`/product/${p.slug}`)}
                     />
                   </div>
-                  {/* </div> */}
-
                   <div className="product-details">
                     <h3 className="product-name">{p.name}</h3>
                     <p className="product-price">₹ {p.price}</p>
                     <p className="product-description">
                       <p className="topic">Description</p>
-                      {p.description}
-                      {/* {p.description.substring(0, 30)}... */}
+                      {expandedDescriptions[p._id]
+                        ? p.description
+                        : `${p.description.substring(0, 100)}...`}
+                      <button
+                        className="btn-link"
+                        onClick={() => toggleDescriptionExpansion(p._id)}
+                      >
+                        {expandedDescriptions[p._id] ? "See Less" : "See More"}
+                      </button>
                     </p>
                   </div>
                   <div className="buttons-container">
-                    {/* <button
+                    <button
                       className="button"
                       onClick={() => navigate(`/product/${p.slug}`)}
                     >
                       More Details
-                    </button> */}
+                    </button>
                     <button
                       className="button"
                       onClick={() => {
@@ -282,21 +239,32 @@ const HomePage = () => {
                       Add to Cart
                     </button>
                   </div>
+                  {/* Observe the last product element */}
+                  {index === products.length - 1 && (
+                    <div ref={observer.current}></div>
+                  )}
                 </div>
               ))}
             </div>
 
             <div className="m-2 p-3">
               {products && products.length < total && (
-                <button
-                  className="btn btn-warning"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setPage(page + 1);
-                  }}
-                >
-                  {loading ? "Loading ..." : "Loadmore"}
-                </button>
+                <>
+                  {loadingMore ? (
+                    <Spin tip="Loading..." />
+                  ) : (
+                    <button
+                      className="btn btn-warning"
+                      id="loadmore"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setPage(page + 1);
+                      }}
+                    >
+                      Loadmore
+                    </button>
+                  )}
+                </>
               )}
             </div>
           </div>

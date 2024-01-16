@@ -5,20 +5,27 @@
 }
 
 .filter-section {
-  border: 1px solid rgba(124, 124, 124, 0.903);
   border-radius: 30px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin-bottom: 20px;
   font-family: "Arial", sans-serif;
-  background: rgba(0, 0, 0, 0.237);
+  border: 1px solid rgba(124, 124, 124, 0.903);
+  background: rgb(255, 255, 255);
 }
 
 .filter-heading {
   font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.903);
-  font-weight: 400;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.903);
   margin-bottom: 15px;
+}
+
+.filter-section,
+.custom-radio,
+.ant-checkbox-wrapper,
+.btn-danger {
+  border-radius: 20px;
 }
 
 .radio-group-container,
@@ -26,6 +33,13 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.custom-radio,
+.ant-checkbox-wrapper,
+.btn-danger {
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .custom-radio input[type="radio"],
@@ -50,19 +64,20 @@
 .ant-checkbox-wrapper {
   cursor: pointer;
   padding: 10px;
-  color: #fff;
-  background-color: #5a2782;
+  color: #007bff;
+  background-color: #f0f0f0;
   border: 1px solid rgba(74, 74, 74, 0.903);
-  border-radius: 10px;
   display: flex;
   align-items: center;
   transition: background-color 0.2s ease;
-  font-size: 1rem;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .custom-radio:hover,
 .ant-checkbox-wrapper:hover {
-  background-color: #956f36;
+  background-color: #ffc774;
+  color: #000;
 }
 
 .ant-radio-checked .ant-radio-inner {
@@ -70,19 +85,23 @@
   border-color: rgba(154, 25, 219, 0.903) !important ;
 }
 .ant-radio-wrapper{
+  margin: 10px 0;
+}
+
+.btn-danger{
+  background-color: #b4b4b457 !important;
+  border: 4px solid #ad3ffc !important;
+  color: #5500ff;
+  font-size: 22px;
+  font-weight: bold;
+}
+.btn-danger {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-.btn-danger{
-  background-color:#2f292957 !important;
-  font-size: large;
-  font-weight: 400;
-  border: 4px solid #ad3ffc!important;
-  border-radius: 20px;
-}
 .btn-danger:hover{
-  background-color:#00000086 !important;
+  background-color: #000000be !important;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;

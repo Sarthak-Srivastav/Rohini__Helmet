@@ -34,7 +34,7 @@ const ScrollButton = () => {
       onClick={scrollToTop}
       style={{ position: 'fixed', bottom: '50px', right: '30px', zIndex: '1000' }}
     >
-      <BiSolidUpArrow style={{ display: "block" }} />
+      <BiSolidUpArrow id='Arrow' style={{ display: "block" }} />
     </button>
   );
 }
