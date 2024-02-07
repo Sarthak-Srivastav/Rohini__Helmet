@@ -283,27 +283,28 @@
 .product-name-h4 {
   font-size: 1.2rem;
   margin-bottom: 5px;
-  color: #ffffff;
+  font-weight: 600;
+  color: #b90142;
 }
 
 .product-description-h4 {
   font-size: 1.2rem;
   margin-bottom: 5px;
-  color: #ffffff;
+  color: #525252;
 }
 .product-qty-h4 {
   font-size: 1.2rem;
   margin-bottom: 5px;
-  color: #fffdfd;
+  color: #363636;
 }
 .product-brand-h4 {
   font-size: 1.2rem;
   margin-bottom: 5px;
-  color: #ffffff;
+  color: #242424;
 }
 
 .product-price-h4 {
-  color: #ffbf00;
-  font-size: 1.2rem;
+  color: #7700d2;
+  font-size: 1.4rem;
   margin-bottom: 5px;
 }

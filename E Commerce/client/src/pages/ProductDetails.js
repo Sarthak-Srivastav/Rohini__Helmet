@@ -6,7 +6,7 @@ import { useCart } from "../context/cart";
 import { toast } from "react-hot-toast";
 import "../styles/productCard.css";
 
-const ProductDetails = () => {
+        const ProductDetails = () => {
   const navigate = useNavigate();
   const [cart, setCart] = useCart();
   const params = useParams();

@@ -113,6 +113,8 @@ const Header = () => {
                   </ul>
                 </li>
 
+                <SearchInput />
+              
                 {!auth?.user ? (
                   <>
                     <li className="nav-item">
@@ -171,7 +173,6 @@ const Header = () => {
                     </NavLink>
                   </Badge>
                 </li>
-                <SearchInput />
               </ul>
             </div>
           </div>

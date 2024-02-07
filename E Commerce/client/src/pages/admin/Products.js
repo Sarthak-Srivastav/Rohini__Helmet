@@ -13,7 +13,7 @@
 //   const getAllProducts = async () => {
 //     try {
 //       const { data } = await axios.get("http://localhost:3000/api/v1/product/get-product");
-//       setProducts(data.products);
+//       setProducts(datas);
 //     } catch (error) {
 //       console.log(error);
 //       toast.error("Something Went Wrong");
@@ -72,7 +72,7 @@ const Products = () => {
       const { data } = await axios.get(
         "http://localhost:3000/api/v1/product/get-product"
       );
-      setProducts(data.products);
+      setProducts(data);
       console.log("Received data:", data);
       console.log("Current products state:", products);
     } catch (error) {
