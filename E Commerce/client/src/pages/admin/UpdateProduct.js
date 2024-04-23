@@ -19,7 +19,8 @@ const UpdateProduct = () => {
   const [category, setCategory] = useState("");
   // const [quantity, setQuantity] = useState("");
   const [brand, setBrand] = useState("");
-  const [shipping, setShipping] = useState("");
+  // const [shipping, setShipping] = useState("");
+  const [type, setType] = useState("");
   const [photo, setPhoto] = useState("");
   const [id, setId] = useState("");
 
@@ -34,8 +35,9 @@ const UpdateProduct = () => {
       setId(data.product._id);
       setDescription(data.product.description);
       setPrice(data.product.price);
+      setType(data.product.type);
       // setQuantity(data.product.quantity);
-      setShipping(data.product.shipping);
+      // setShipping(data.product.shipping);
       setCategory(data.product.category._id);
     } catch (error) {
       console.log(error);
@@ -71,6 +73,7 @@ const UpdateProduct = () => {
       productData.append("brand", brand);
       productData.append("description", description);
       productData.append("price", price);
+      productData.append("type", type);
       // productData.append("quantity", quantity);
       photo && productData.append("photo", photo);
       productData.append("category", category);
@@ -202,6 +205,15 @@ const UpdateProduct = () => {
                   onChange={(e) => setPrice(e.target.value)}
                 />
               </div>
+              <div className="mb-3">
+                <input
+                  type="text"
+                  value={type}
+                  placeholder="write Type"
+                  className="form-control"
+                  onChange={(e) => setType(e.target.value)}
+                />
+              </div>
               {/* <div className="mb-3">
                 <input
                   type="number"
@@ -211,7 +223,7 @@ const UpdateProduct = () => {
                   onChange={(e) => setQuantity(e.target.value)}
                 />
               </div> */}
-              <div className="mb-3">
+              {/* <div className="mb-3">
                 <Select
                   bordered={false}
                   placeholder="Select Shipping "
@@ -230,7 +242,7 @@ const UpdateProduct = () => {
                     Yes
                   </Option>
                 </Select>
-              </div>
+              </div> */}
               <div className="mb-3">
                 <button className="btn btn-update" onClick={handleUpdate}>
                   UPDATE PRODUCT

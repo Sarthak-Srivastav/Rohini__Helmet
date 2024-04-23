@@ -17,9 +17,10 @@ const CreateProduct = () => {
   const [price, setPrice] = useState("");
   const [photo, setPhoto] = useState("");
   const [category, setCategory] = useState("");
+  const [type, setType] = useState("");
   const [brand, setBrand] = useState("");
   // const [quantity, setQuantity] = useState("");
-  const [shipping, setShipping] = useState("");
+  // const [shipping, setShipping] = useState("");
 
   // get all categories
   const getAllCategory = async () => {
@@ -71,6 +72,7 @@ const CreateProduct = () => {
       productData.append("name", name);
       productData.append("description", description);
       productData.append("price", price);
+      productData.append("type", type);
       // productData.append("quantity", quantity);
       productData.append("photo", photo);
       productData.append("brand", brand);
@@ -182,6 +184,15 @@ const CreateProduct = () => {
                   onChange={(e) => setPrice(e.target.value)}
                 />
               </div>
+              <div className="mb-3">
+                <input
+                  type="text"
+                  value={type}
+                  placeholder="Write Type"
+                  className="form-control"
+                  onChange={(e) => setType(e.target.value)}
+                />
+              </div>
               {/* <div className="mb-3">
                 <input
                   type="number"
@@ -191,7 +202,7 @@ const CreateProduct = () => {
                   onChange={(e) => setQuantity(e.target.value)}
                 />
               </div> */}
-              <div className="mb-3">
+              {/* <div className="mb-3">
                 <Select
                   bordered={false}
                   placeholder="Select Shipping"
@@ -209,7 +220,7 @@ const CreateProduct = () => {
                     Yes
                   </Select.Option>
                 </Select>
-              </div>
+              </div> */}
               <div className="mb-3">
                 <button className="CreateBtn" onClick={handleCreate}>
                   CREATE PRODUCT

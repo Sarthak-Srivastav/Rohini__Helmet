@@ -62,16 +62,20 @@ const ProductDetails = () => {
             <div className="col-md-7 detail-box-2">
               {/* <h1 className="text-center">Product Details</h1> */}
               <div className="product-detail-box">
-                <h1 id="p-brand">{product.brand}</h1>
-                <h1 id="p-name">{product.name}</h1>
+                <h1 id="p-brand">Origin: {product.brand}</h1>
+                <h1 id="p-name">Name: {product.name}</h1>
                 {/* <h1 id="p-name">Shipping: {product.shipping ? "Yes" : "No"}</h1> */}
                 <h6 id="p-category">Category : {product?.category?.name}</h6>
                 <h3 id="p-description">
-                  <h6 id="p-t-description">Description</h6>
+                  <h6 id="p-t-description">Recipe Instruction</h6>
                   {product.description}
                 </h3>
-                <h6 id="p-price">₹{product.price}</h6>
-                <button className="btn btn-secondary ms-2">Add to cart</button>
+                <h6 id="p-price">Calories: {product.price}</h6>
+                <h6 id="p-price">Type: {product.type}</h6>
+                {/* <button className="btn btn-dark ms-2">
+                  Add to Favorites ❤️
+                </button> */}
+
               </div>
             </div>
           </div>

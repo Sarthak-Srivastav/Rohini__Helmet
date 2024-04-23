@@ -9,7 +9,7 @@ const About = () => {
           <img
             src="/images/contact-2.jpg"
             alt="contactus"
-            style={{ width: "100%" }}
+            style={{ width: "94%" }}
           />
         </div>
         <div className="col-md-4">
@@ -17,31 +17,42 @@ const About = () => {
             ABOUT US
           </h1>
           <p className="text-white text-justify mt-3">
-            <b>
-              ALL TYPES OF HELMETS AND RIDING ACCESSORIES ARE AVAILABLE IN YOUR
-              REGION AT REASONABLE PRICES.
-            </b>
+            <p>
+              Welcome to Flavor Fusion: We're thrilled to have you join us on
+              our culinary journey!.
+            </p>
           </p>
           <p className="text-white text-justify mt-2">
-            WE DEAL IN STUDDS , SMK, STEELBIRD, VEGA, AXOR, ASCONE,MT, GLIDERS ,
-            BSDDP, PROBIKER AND MORE BRANDS FOR HELMETS AND ACCESSORIES
+            <b>OUR STORY : </b>
+            <br />
+            Flavor Fusion Was Born Out Of A Shared Passion For Cooking. Our Team
+            Of Food Enthusiasts Came Together To Create A Platform Where
+            Everyone, From Beginners To Seasoned Chefs, Can Find Inspiration And
+            Joy In The Kitchen.
           </p>
           <p className="text-white text-justify mt-2">
-            <b>TYPES OF HELMETS</b>
+            <b>WILD VARIETY : </b>
+            <br />
+            Explore Our Diverse Collection Of Recipes, Carefully Curated To
+            Cater To Every Taste Bud And Dietary Preference. Whether You're
+            Craving Comfort Food Classics, Exploring International Cuisines, Or
+            Looking For Healthy Meal Options, We've Got Something For You.
+          </p>
+
+          <p className="text-white text-justify mt-2">
+            <b>LETS GET COOKING ! </b>
+            <br />
+            Whether You're Whipping Up A Quick Weeknight Dinner Or Preparing An
+            Elaborate Feast For A Special Occasion, Let Flavor Fusion Be Your
+            Go-to Destination For Culinary Inspiration And Satisfaction. Happy
+            Cooking!
           </p>
           <p className="text-white text-justify mt-2">
-            FULL FACE HELMETS, HALF FACE/OPEN FACE HELMETS,
-          </p>
-          <p className="text-white text-justify mt-2">
-            GRAPHIC HELMETS, FLIP UP HELMETS, KIDS HELMETS, WOMEN HELMETS, MEN
-            HELMETS, LIGHT WEIGHT HELMETS, ISI MARKED , DOT PROTECTION , ECE
-            CERTIFIED HELMETS
-          </p>
-          <p className="text-white text-justify mt-2">
-            <b>RIDING ACCESSORIES</b>
-          </p>
-          <p className="text-white text-justify mt-2">
-            GLOVES, RIDING JACKETS, BOOTS, SIDE LUGGAGE ARE ALSO AVAILABLE
+            <b>QUALITY MATTERS : </b>
+            <br />
+            Every Recipe On [Your Recipe Website Name] Undergoes Rigorous
+            Testing And Refinement By Our Culinary Experts To Ensure That You
+            Achieve Delicious Results Every Time You Cook.
           </p>
         </div>
       </div>

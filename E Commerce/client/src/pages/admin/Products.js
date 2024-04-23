@@ -94,7 +94,7 @@ const Products = () => {
             <AdminMenu />
           </div>
           <div className="col-md-9">
-            <h1 className="text-center">All Products List</h1>
+            <h1 className="text-center">All Recipes List</h1>
             <div className="row">
               {products?.map((p) => (
                 <div className="col-md-4 mb-4" key={p._id}>
@@ -130,6 +130,9 @@ const Products = () => {
                         </h4>
                         <h4 className="product-description-h4">
                           <b>Desc :</b> {p.description}
+                        </h4>
+                        <h4 className="product-description-h4">
+                          <b>Type :</b> {p.type}
                         </h4>
                         {/* <h4 className="product-qty-h4">
                           <b>Qty :</b> {p.quantity}

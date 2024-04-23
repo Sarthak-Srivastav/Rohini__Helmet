@@ -109,8 +109,7 @@ const Contact = () => {
         <div className="col-md-4">
           <h1 className="h1-back">CONTACT US</h1>
           <p className="text-justify mt-2">
-            any query and info about prodduct feel free to call anytime we 24X7
-            vaialible
+          Any Query And Info About Any Service Feel Free To Call Anytime We 24x7 Available
           </p>
           <p className="mt-3">
             <Link
@@ -134,10 +133,11 @@ const Contact = () => {
             </Link>
           </p>
           <p className="mt-3">
-            <BiMailSend /> : rohini_helmet@email.com
+            <BiMailSend /> : Flavor_Fusion@gmail.com
           </p>
           <p className="mt-3">
-            <BiPhoneCall /> : 9990761180          </p>
+            <BiPhoneCall /> : 99907 61180{" "}
+          </p>
         </div>
       </div>
     </Layout>

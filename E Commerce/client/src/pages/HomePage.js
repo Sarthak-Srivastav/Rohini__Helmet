@@ -237,7 +237,7 @@ const HomePage = () => {
             </div> */}
 
           <div className="col-md-10 pl-5 ">
-            <h1 className="home-text-center">All Products</h1>
+            <h1 className="home-text-center">All Recipes ...</h1>
             <div className="d-flex flex-wrap justify-content-around">
               {products?.map((p) => (
                 <div className={"card-1"} key={p._id}>
@@ -252,13 +252,15 @@ const HomePage = () => {
                   {/* </div> */}
 
                   <div className="product-details">
-                    <h3 className="product-name">{p.name}</h3>
-                    <p className="product-price">₹ {p.price}</p>
-                    <p className="product-description">
+                    <p className="product-price">Origin: {p.brand}</p>
+                    <h3 className="product-name">Name: {p.name}</h3>
+                    <p className="product-price">Calories: {p.price}</p>
+                    {/* <p className="product-description">
                       <p className="topic">Description</p>
-                      {p.description}
+                      {p.description}</p> */}
+                    <p className="product-price">Type: {p.type}</p>
                       {/* {p.description.substring(0, 30)}... */}
-                    </p>
+                    
                   </div>
                   <div className="buttons-container">
                     <button
@@ -275,10 +277,10 @@ const HomePage = () => {
                           "cart",
                           JSON.stringify([...cart, p])
                         );
-                        toast.success("Product Added To Cart");
+                        toast.success("Product Added To Favorites");
                       }}
                     >
-                      Add to Cart
+                      Add to Fav.
                     </button>
                   </div>
                 </div>

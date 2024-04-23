@@ -18,6 +18,10 @@ const productSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    type: {
+      type: String,
+      required: true,
+    },
     price: {
       type: Number,
       required: true,
@@ -35,9 +39,9 @@ const productSchema = new mongoose.Schema(
       data: Buffer,
       contentType: String,
     },
-    shipping: {
-      type: Boolean,
-    },
+    // shipping: {
+    //   type: Boolean,
+    // },
   },
   {
     timestamps: true,

@@ -1006,6 +1006,7 @@ img {
 }
 
 #policy-head {
+  text-align: center;
   position: relative;
   color: #fff;
   font-size: 40px;
@@ -1032,9 +1033,9 @@ img {
 }
 
 .policy-content p{
-  text-align: center;
+  text-align: left;
 }
 
 .policy-content h3{
-  text-align: center;
+  text-align: left;
 }
