@@ -131,9 +131,9 @@ const Products = () => {
                         <h4 className="product-description-h4">
                           <b>Desc :</b> {p.description}
                         </h4>
-                        <h4 className="product-qty-h4">
+                        {/* <h4 className="product-qty-h4">
                           <b>Qty :</b> {p.quantity}
-                        </h4>
+                        </h4> */}
                         <h4 className="product-price-h4">
                           <b>Price :</b> ₹ {p.price}
                         </h4>

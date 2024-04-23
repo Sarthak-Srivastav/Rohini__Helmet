@@ -18,7 +18,7 @@ const CreateProduct = () => {
   const [photo, setPhoto] = useState("");
   const [category, setCategory] = useState("");
   const [brand, setBrand] = useState("");
-  const [quantity, setQuantity] = useState("");
+  // const [quantity, setQuantity] = useState("");
   const [shipping, setShipping] = useState("");
 
   // get all categories
@@ -71,7 +71,7 @@ const CreateProduct = () => {
       productData.append("name", name);
       productData.append("description", description);
       productData.append("price", price);
-      productData.append("quantity", quantity);
+      // productData.append("quantity", quantity);
       productData.append("photo", photo);
       productData.append("brand", brand);
       productData.append("category", category);
@@ -99,11 +99,11 @@ const CreateProduct = () => {
             <AdminMenu />
           </div>
           <div className="col-md-9">
-            <h1 className="text-center">Create Product</h1>
+            <h1 className="text-center">Create Recipe 🥗</h1>
             <div className="CreateProduct">
               <Select
                 bordered={false}
-                placeholder="Select a category"
+                placeholder="Select a Category"
                 size="large"
                 showSearch
                 className="form-select mb-3"
@@ -112,7 +112,11 @@ const CreateProduct = () => {
                 }}
               >
                 {categories?.map((c) => (
-                  <Select.Option key={c._id} value={c._id} className="custom-option">
+                  <Select.Option
+                    key={c._id}
+                    value={c._id}
+                    className="custom-option"
+                  >
                     {c.name}
                   </Select.Option>
                 ))}
@@ -146,7 +150,7 @@ const CreateProduct = () => {
                 <input
                   type="text"
                   value={brand}
-                  placeholder="write Brand name"
+                  placeholder="Write Country Of Origin"
                   className="form-control"
                   onChange={(e) => setBrand(e.target.value)}
                 />
@@ -155,7 +159,7 @@ const CreateProduct = () => {
                 <input
                   type="text"
                   value={name}
-                  placeholder="write a name"
+                  placeholder="Write Recipe Name"
                   className="form-control"
                   onChange={(e) => setName(e.target.value)}
                 />
@@ -164,7 +168,7 @@ const CreateProduct = () => {
                 <textarea
                   type="text"
                   value={description}
-                  placeholder="write a description"
+                  placeholder="Write The Recipe"
                   className="form-control"
                   onChange={(e) => setDescription(e.target.value)}
                 />
@@ -173,12 +177,12 @@ const CreateProduct = () => {
                 <input
                   type="number"
                   value={price}
-                  placeholder="write a Price"
+                  placeholder="Write Total Calories"
                   className="form-control"
                   onChange={(e) => setPrice(e.target.value)}
                 />
               </div>
-              <div className="mb-3">
+              {/* <div className="mb-3">
                 <input
                   type="number"
                   value={quantity}
@@ -186,7 +190,7 @@ const CreateProduct = () => {
                   className="form-control"
                   onChange={(e) => setQuantity(e.target.value)}
                 />
-              </div>
+              </div> */}
               <div className="mb-3">
                 <Select
                   bordered={false}
@@ -198,8 +202,12 @@ const CreateProduct = () => {
                     setShipping(value);
                   }}
                 >
-                  <Select.Option className="custom-option" value="0">No</Select.Option>
-                  <Select.Option className="custom-option"value="1">Yes</Select.Option>
+                  <Select.Option className="custom-option" value="0">
+                    No
+                  </Select.Option>
+                  <Select.Option className="custom-option" value="1">
+                    Yes
+                  </Select.Option>
                 </Select>
               </div>
               <div className="mb-3">

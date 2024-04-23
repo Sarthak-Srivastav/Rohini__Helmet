@@ -25,7 +25,7 @@ export const createProductController = async (req, res) => {
       description,
       price,
       category,
-      quantity,
+      // quantity,
       shipping,
       brand,
     } = req.fields;
@@ -43,8 +43,8 @@ export const createProductController = async (req, res) => {
         return res.status(500).send({ error: "Price is required" });
       case !category:
         return res.status(500).send({ error: "Category is required" });
-      case !quantity:
-        return res.status(500).send({ error: "Quantity is required" });
+      // case !quantity:
+      //   return res.status(500).send({ error: "Quantity is required" });
       case !photo:
         return res.status(500).send({ error: "Photo is required" });
       case photo.size > 10000000:
@@ -166,7 +166,7 @@ export const updateProductController = async (req, res) => {
       description,
       price,
       category,
-      quantity,
+      // quantity,
       shipping,
       brand,
     } = req.fields;
@@ -184,8 +184,8 @@ export const updateProductController = async (req, res) => {
         return res.status(500).send({ error: "Brand is required" });
       case !category:
         return res.status(500).send({ error: "Category is required" });
-      case !quantity:
-        return res.status(500).send({ error: "Quantity is required" });
+      // case !quantity:
+      //   return res.status(500).send({ error: "Quantity is required" });
       case photo && photo.size > 1000000:
         return res
           .status(500)

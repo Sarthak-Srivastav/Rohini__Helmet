@@ -64,6 +64,7 @@ const ProductDetails = () => {
               <div className="product-detail-box">
                 <h1 id="p-brand">{product.brand}</h1>
                 <h1 id="p-name">{product.name}</h1>
+                {/* <h1 id="p-name">Shipping: {product.shipping ? "Yes" : "No"}</h1> */}
                 <h6 id="p-category">Category : {product?.category?.name}</h6>
                 <h3 id="p-description">
                   <h6 id="p-t-description">Description</h6>
@@ -114,7 +115,10 @@ const ProductDetails = () => {
                     className="button"
                     onClick={() => {
                       setCart([...cart, p]);
-                      localStorage.setItem("cart", JSON.stringify([...cart, p]));
+                      localStorage.setItem(
+                        "cart",
+                        JSON.stringify([...cart, p])
+                      );
                       toast.success("Product Added To Cart");
                     }}
                   >

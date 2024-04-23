@@ -17,7 +17,7 @@ const UpdateProduct = () => {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [category, setCategory] = useState("");
-  const [quantity, setQuantity] = useState("");
+  // const [quantity, setQuantity] = useState("");
   const [brand, setBrand] = useState("");
   const [shipping, setShipping] = useState("");
   const [photo, setPhoto] = useState("");
@@ -34,7 +34,7 @@ const UpdateProduct = () => {
       setId(data.product._id);
       setDescription(data.product.description);
       setPrice(data.product.price);
-      setQuantity(data.product.quantity);
+      // setQuantity(data.product.quantity);
       setShipping(data.product.shipping);
       setCategory(data.product.category._id);
     } catch (error) {
@@ -71,7 +71,7 @@ const UpdateProduct = () => {
       productData.append("brand", brand);
       productData.append("description", description);
       productData.append("price", price);
-      productData.append("quantity", quantity);
+      // productData.append("quantity", quantity);
       photo && productData.append("photo", photo);
       productData.append("category", category);
       const { data } = axios.put(
@@ -202,7 +202,7 @@ const UpdateProduct = () => {
                   onChange={(e) => setPrice(e.target.value)}
                 />
               </div>
-              <div className="mb-3">
+              {/* <div className="mb-3">
                 <input
                   type="number"
                   value={quantity}
@@ -210,7 +210,7 @@ const UpdateProduct = () => {
                   className="form-control"
                   onChange={(e) => setQuantity(e.target.value)}
                 />
-              </div>
+              </div> */}
               <div className="mb-3">
                 <Select
                   bordered={false}
@@ -223,8 +223,12 @@ const UpdateProduct = () => {
                   }}
                   value={shipping ? "yes" : "No"}
                 >
-                  <Option className="custom-option" value="0">No</Option>
-                  <Option className="custom-option" value="1">Yes</Option>
+                  <Option className="custom-option" value="0">
+                    No
+                  </Option>
+                  <Option className="custom-option" value="1">
+                    Yes
+                  </Option>
                 </Select>
               </div>
               <div className="mb-3">

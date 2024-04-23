@@ -148,14 +148,14 @@ const Footer = () => {
                 cursor: "pointer",
               }}
             >
-              Rohini Helmets
+              Flavor Fusion
             </span>
           </NavLink>
         </div>
         <div id="item-1">
           <p className="footer-info-text">
-            "Ride in style, ride in safety – our helmet collection offers the
-            best of both worlds for discerning riders."
+            Unlock Flavor, Unleash Creativity: Where Every Recipe Tells a Delicious Story!.<br /><br />
+            Indulge in Culinary Excellence: Where Every Dish Inspires!
           </p>
         </div>
         <div id="item-2">
@@ -189,13 +189,13 @@ const Footer = () => {
             </ul>
             <ul className="ul-2">
               <li className="li-2">
-                <BiMailSend /> : rohini_helmet@gmail.com
+                <BiMailSend /> : Flavor_Fusion@gmail.com
               </li>
               <li className="li-2">
-                <BiPhoneCall id="phone" /> : 098914 08448
+                <BiPhoneCall id="phone" /> : 09990761180
               </li>
               <li className="li-2">
-                <BiPhoneCall id="phone" /> : 098100 57030
+                <BiPhoneCall id="phone" /> : 08595775863
               </li>
             </ul>
           </div>
@@ -282,7 +282,7 @@ const Footer = () => {
       </div>
       <div id="item-5">
         <div className="copyright">
-          <span>Copyright © 2022, ROHINI HELMETS All Rights reserved</span>
+          <span>Copyright © 2024, FLAVOR FUSION All Rights reserved</span>
         </div>
       </div>
       <ScrollButton />
