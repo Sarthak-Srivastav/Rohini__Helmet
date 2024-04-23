@@ -213,7 +213,7 @@ const Register = () => {
                       onChange={(e) => setAnswer(e.target.value)}
                       className="form-control"
                       id="exampleInputEmail1"
-                      placeholder="What Is Your Favorite Movie ?"
+                      placeholder="What Is Your Favorite Food ?"
                       required
                       autocomplete="off"
                     />

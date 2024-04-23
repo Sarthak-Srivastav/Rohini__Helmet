@@ -69,7 +69,7 @@ const Header = () => {
                     marginLeft: "20px",
                   }}
                 >
-                  Rohini Helmets
+                  Flavor Fusion
                 </span>
               </NavLink>
             </div>
@@ -168,7 +168,7 @@ const Header = () => {
                 <li className="nav-item">
                   <Badge count={cart?.length} showZero>
                     <NavLink to="/cart" className="nav-link cart-count">
-                      Cart 
+                      favorite ❤️
                     </NavLink>
                   </Badge>
                 </li>

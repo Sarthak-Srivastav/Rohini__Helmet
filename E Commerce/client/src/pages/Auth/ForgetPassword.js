@@ -130,7 +130,7 @@ const ForgetPassword = () => {
                       onChange={(e) => setAnswer(e.target.value)}
                       className="form-control"
                       id="exampleInputEmail1"
-                      placeholder="Enter Your Favorite Movie"
+                      placeholder="Enter Your Favorite Food"
                       required
                       autocomplete="off"
                     />
