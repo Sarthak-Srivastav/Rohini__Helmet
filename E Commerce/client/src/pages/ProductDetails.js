@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Layout from "../components/layout/layout";
+// import  "./src/styles/fonts/Blackboard.otf";
 import { useParams, useNavigate } from "react-router-dom";
 import { useCart } from "../context/cart";
 import { toast } from "react-hot-toast";
@@ -47,35 +48,37 @@ const ProductDetails = () => {
   };
   return (
     <Layout>
-      <div class="specific-page-background">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-5 detail-box">
-              <img
-                src={`/api/v1/product/product-photo/${product._id}`}
-                className="card-img-top"
-                alt={product.name}
-                // height="300"
-                // width={"350px"}
-              />
-            </div>
-            <div className="col-md-7 detail-box-2">
-              {/* <h1 className="text-center">Product Details</h1> */}
-              <div className="product-detail-box">
-                <h1 id="p-brand">Origin: {product.brand}</h1>
-                <h1 id="p-name">Name: {product.name}</h1>
-                {/* <h1 id="p-name">Shipping: {product.shipping ? "Yes" : "No"}</h1> */}
-                <h6 id="p-category">Category : {product?.category?.name}</h6>
-                <h3 id="p-description">
-                  <h6 id="p-t-description">Recipe Instruction</h6>
-                  {product.description}
-                </h3>
-                <h6 id="p-price">Calories: {product.price}</h6>
-                <h6 id="p-price">Type: {product.type}</h6>
-                {/* <button className="btn btn-dark ms-2">
-                  Add to Favorites ❤️
-                </button> */}
+            <div className="more-d-box">
+              <div className="col-md-5 detail-box">
+                <img
+                  src={`/api/v1/product/product-photo/${product._id}`}
+                  className="card-img-top"
+                  alt={product.name}
+                  // height="300"
+                  // width={"350px"}
+                />
+                <div className="product-detail-box">
+                  <h1 id="p-name">Name: {product.name}</h1>
+                  <h1 id="p-brand">Origin: {product.brand}</h1>
+                  {/* <h1 id="p-name">Shipping: {product.shipping ? "Yes" : "No"}</h1> */}
+                  <h6 id="p-category">Category : {product?.category?.name}</h6>
+                  <h3 id="p-description">
+                    <h6 id="p-t-description">Recipe Instruction</h6>
+                    {product.description}
+                  </h3>
+                  <h6 id="p-price">Calories: {product.price}</h6>
+                  <h6 id="p-price">Type: {product.type}</h6>
+                  {/* <button className="btn btn-dark ms-2">
+                    Add to Favorites ❤️
+                  </button> */}
 
+                </div>
+              </div>
+              <div className="col-md-7 detail-box-2_1">
+                {/* <h1 className="text-center">Product Details</h1> */}
+                
               </div>
             </div>
           </div>
@@ -152,7 +155,6 @@ const ProductDetails = () => {
           ))}
         </div> */}
         </div>
-      </div>
     </Layout>
   );
 };

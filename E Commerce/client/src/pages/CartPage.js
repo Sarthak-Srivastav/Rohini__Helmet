@@ -89,7 +89,7 @@ const CartPage = () => {
                 ? `You Have ${cart.length} Recipes in your favorites ❤️ ${
                     auth?.token ? "" : "please login to checkout"
                   }`
-                : " Your Cart Is Empty"}
+                : "You have nothing saved as your favourite."}
             </h4>
           </div>
         </div>

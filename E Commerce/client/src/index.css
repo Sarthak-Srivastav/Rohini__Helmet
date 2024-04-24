@@ -20,7 +20,8 @@
 
 main {
   /* background-color: #f2f2f2; */
-  background: linear-gradient(300deg, #575757, #070606, #232323);
+  /* background: linear-gradient(300deg, #232323, #232323); */
+  background: linear-gradient(300deg, #f6f5f5, #f1f1f1);
   background-size: 180% 180%;
   animation: gradient-animation 18s ease infinite;
   /* padding-top: 20px; */
@@ -40,27 +41,25 @@ main {
 
 h1 {
   color: #ffffff;
+  text-transform: uppercase;
 }
 
 .home-text-center {
   /* border-bottom: 5px solid #007bff; */
-  position: relative;
-  color: #fff;
-  text-align: center;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-}
-.home-text-center::before {
-  /* Adjust the thickness and color as needed */
-  content: "";
-  position: absolute;
+  background: -webkit-linear-gradient(300deg,#f50404,#5900ff);
+  animation: gradient-animation 10s ease infinite;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  display: flex;
   justify-content: center;
-  bottom: -7px;
-  width: 230px;
-  height: 5px;
-  background: linear-gradient(135deg, #ff0000, #272727);
+  font-weight: 600;
+  font-size: 90px;
+  margin-top: none;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
+
 
 /* font-family: 'Josefin Sans', sans-serif;
 font-family: 'Libre Baskerville', serif;
@@ -121,6 +120,11 @@ button.navbar-toggler {
   src: local("lost_treasure"),
     url("./fonts/Lost_Treasure.otf") format("truetype");
 }
+@font-face {
+  font-family: "trail-font";
+  src: local("trail_font"),
+    url("./fonts/Trail_font.otf") format("truetype");
+}
 
 .navbar-nav {
   list-style: none;
@@ -146,7 +150,7 @@ button.navbar-toggler {
 
 .nav-link {
   text-decoration: none;
-  color: #ff0000;
+  color: #ffe8e8;
   font-weight: 600;
   transition: color 0.3s;
 }
@@ -157,11 +161,11 @@ button.navbar-toggler {
   color: rgb(255, 70, 215);
 }
 .navbar-nav .nav-link.active {
-  color: #bcbcbc;
+  color: #ad3ffc;
 }
 .nav-link-2 {
   text-decoration: none;
-  color: #ff0000;
+  color: #fefefe;
   font-weight: 600;
   transition: color 0.3s;
 }
@@ -186,7 +190,10 @@ button.navbar-toggler {
 .dropdown-item:hover {
   width: 100%;
   background-color: transparent;
-  color: #ffa601;
+  color: #ff00d9;
+}
+.dropdown-item.active{
+  background-color: transparent;
 }
 
 /* .navbar-nav .nav-link.active{
@@ -256,6 +263,50 @@ button.navbar-toggler {
   margin-top: 2px;
   padding: 0;
 }
+
+slider-container {
+  /* position: relative; */
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+}
+
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.arrow-button:hover {
+  color: #eb1b1b;
+}
+
+/*==============Loadmore==============*/
+#loadmore{
+  background-color:#232323;
+  color: #ff66f0;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+}
+#loadmore:hover{
+  background-color: #232323         ;
+  color:#ffe9fd;
+  transform: scale(1.05);
+}
+
 
 /* =================================
 ======== page not found css ======= */
@@ -348,10 +399,6 @@ img {
   backdrop-filter: blur(10px);
 }
 
-.braintree-heading {
-  color: #fff;
-  font-size: 18px;
-}
 
 /*=======================*/
 .product-link {
@@ -379,8 +426,8 @@ img {
   border-width: 5px;
   border-image-source: linear-gradient(
     to left,
-    #0c356a,
-    #26c4ca
+    #330183,
+    #8100a4
   ); /* gradient textbox color */
 }
 /* outline border of textarea  */
@@ -586,19 +633,19 @@ img {
 /* category-button-edit */
 
 .ui-btn-edit {
-  --btn-default-bg: #54b435;
+  --btn-default-bg: #40ff00;
   --btn-padding: 15px 20px;
-  --btn-hover-bg: #54b435;
+  --btn-hover-bg: #b0ff96;
   --btn-transition: 0.3s;
   --btn-letter-spacing: 0.1rem;
   --btn-animation-duration: 1.2s;
   --btn-shadow-color: rgba(0, 0, 0, 0.137);
   --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
   --hover-btn-color: black;
-  --default-btn-color: #fff;
-  --font-size: 15px;
+  --default-btn-color: #282828;
+  --font-size: 18px;
   /* 👆 this field should not be empty */
-  --font-weight: 550;
+  --font-weight: 800;
   --font-family: Menlo, Roboto Mono, monospace;
   /* 👆 this field should not be empty */
 }
@@ -747,7 +794,7 @@ img {
 .ui-btn-delete {
   --btn-default-bg: #c70039;
   --btn-padding: 15px 20px;
-  --btn-hover-bg: #c70039;
+  --btn-hover-bg: #ff2d68;
   --btn-transition: 0.3s;
   --btn-letter-spacing: 0.1rem;
   --btn-animation-duration: 1.2s;
@@ -755,9 +802,9 @@ img {
   --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
   --hover-btn-color: black;
   --default-btn-color: #fff;
-  --font-size: 16px;
+  --font-size: 18px;
   /* 👆 this field should not be empty */
-  --font-weight: 600;
+  --font-weight: 800;
   --font-family: Menlo, Roboto Mono, monospace;
   /* 👆 this field should not be empty */
 }
@@ -952,24 +999,54 @@ img {
 .cart-count {
   font-size: 22px;
 }
+/* ========= Cart-Page ========= */
+.summary{
+  color: #ff2a00;
+}
 
-/* all category css  */
-/* styles.css */
-/* styles.css */
+.btn-outline-warning{
+  background: #3f008b;
+  width:auto;
+}
+.braintree-heading{
+  color: #000000;
+  font-size:18px;
+}
+.cart-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 700px;
+  height: 250px;
+  margin-bottom: 20px;
+  color: #2d2d2d;
+  word-wrap: break-word;
+  background: rgba(234, 234, 234, 0.585);
+  background-clip: border-box;
+  border: 2px solid #41414184;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
 .btn-glass {
   font-weight: bold;
-  background: rgba(255, 255, 255, 0.139);
+  background: rgba(255, 255, 255, 0.959);
   border: none;
   padding: 15px 0; /* Adjust vertical padding to expand buttons vertically */
-  width: 100%; /* Make buttons fill the entire line */
-  text-align: center;
-  margin: 10px 0; /* Increase vertical margin to provide spacing between buttons */
+  width: 80%; /* Make buttons fill the entire line */
+  height:100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  margin: 5px 0; /* Increase vertical margin to provide spacing between buttons */
   border-radius: 10px;
-  color: #fff;
+  color: #232323;
   text-decoration: none;
   transition: background 0.3s ease, transform 0.2s ease;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-  display: block; /* Display buttons as block elements to expand horizontally */
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.177);
+  display: flex;
+   /* Display buttons as block elements to expand horizontally */
 }
 
 .btn-glass:hover {

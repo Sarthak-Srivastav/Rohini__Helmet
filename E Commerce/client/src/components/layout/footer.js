@@ -143,7 +143,7 @@ const Footer = () => {
               className="footer-logo"
               style={{
                 color: "White",
-                fontSize: "40px",
+                fontSize: "60px",
                 fontFamily: "lost-treasure",
                 cursor: "pointer",
               }}
@@ -154,51 +154,12 @@ const Footer = () => {
         </div>
         <div id="item-1">
           <p className="footer-info-text">
-            Unlock Flavor, Unleash Creativity: Where Every Recipe Tells a Delicious Story!.<br /><br />
+            Unlock Flavor, Unleash Creativity: Where Every Recipe <br /> Tells a Delicious Story!.<br /><br />
             Indulge in Culinary Excellence: Where Every Dish Inspires!
           </p>
         </div>
         <div id="item-2">
-          <div className="footer-social-link">
-            <h3 id="heading-1">Follow us</h3>
-            <ul className="ul-1">
-              <li className="li-1">
-                <Link
-                  className="li-1 footer-social-link facebook"
-                  to="https://www.facebook.com/HelmetMusic/"
-                >
-                  <FaFacebookF size={"22px"} />
-                </Link>
-              </li>
-              <li className="li-1">
-                <Link
-                  className="li-1 footer-social-link instagram"
-                  to="https://www.instagram.com/helmets_for_india/?hl=en"
-                >
-                  <FaInstagram size={"22px"} />
-                </Link>
-              </li>
-              <li className="li-1">
-                <Link
-                  className="li-1 footer-social-link whatsapp"
-                  to="Whatsapp"
-                >
-                  <FaWhatsapp size={"22px"} />
-                </Link>
-              </li>
-            </ul>
-            <ul className="ul-2">
-              <li className="li-2">
-                <BiMailSend /> : Flavor_Fusion@gmail.com
-              </li>
-              <li className="li-2">
-                <BiPhoneCall id="phone" /> : 09990761180
-              </li>
-              <li className="li-2">
-                <BiPhoneCall id="phone" /> : 08595775863
-              </li>
-            </ul>
-          </div>
+          
         </div>
         <div id="item-3">
           <div className="footer-menu">
@@ -245,16 +206,6 @@ const Footer = () => {
                 </NavLink>
               </li>
             </ul>
-            <h2 id="heading-3">OPENING HOURS</h2>
-            <ul className="ul-4">
-              <li className="li-4">Mon: 9:00 am - 10:00 pm</li>
-              <li className="li-4">Tue: 9:00 am - 10:00 pm</li>
-              <li className="li-4">Wed: 9:00 am - 10:00 pm</li>
-              <li className="li-4">Thu: 9:00 am - 10:00 pm</li>
-              <li className="li-4">Fri: 9:00 am - 10:00 pm</li>
-              <li className="li-4">Sat: 9:00 am - 10:00 pm</li>
-              <li className="li-4">Sun: 9:00 am - 10:30 pm</li>
-            </ul>
             {/* <form>
               <input
                 type="email"
@@ -267,17 +218,46 @@ const Footer = () => {
           </div>
         </div>
         <div id="item-4">
-          <iframe
-            title="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.676014414946!2d77.1250143752211!3d28.729226875612085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d016a4902905d%3A0xe26f6b10a8901011!2sROHINI%20Helmets!5e0!3m2!1sen!2sin!4v1692607916253!5m2!1sen!2sin"
-            width="100%"
-            height="100%"
-            // style="border:0;"
-            // className="item-4-map"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <div className="footer-social-link">
+            <h3 id="heading-1">Follow us</h3>
+            <ul className="ul-1">
+              <li className="li-1">
+                <Link
+                  className="li-1 footer-social-link facebook"
+                  to="https://www.facebook.com/HelmetMusic/"
+                >
+                  <FaFacebookF size={"22px"} />
+                </Link>
+              </li>
+              <li className="li-1">
+                <Link
+                  className="li-1 footer-social-link instagram"
+                  to="https://www.instagram.com/helmets_for_india/?hl=en"
+                >
+                  <FaInstagram size={"22px"} />
+                </Link>
+              </li>
+              <li className="li-1">
+                <Link
+                  className="li-1 footer-social-link whatsapp"
+                  to="Whatsapp"
+                >
+                  <FaWhatsapp size={"22px"} />
+                </Link>
+              </li>
+            </ul>
+            <ul className="ul-2">
+              <li className="li-2">
+                <BiMailSend /> : Flavor_Fusion@gmail.com
+              </li>
+              <li className="li-2">
+                <BiPhoneCall id="phone" /> : 09990761180
+              </li>
+              <li className="li-2">
+                <BiPhoneCall id="phone" /> : 08595775863
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div id="item-5">

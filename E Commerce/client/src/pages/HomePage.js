@@ -237,7 +237,9 @@ const HomePage = () => {
             </div> */}
 
           <div className="col-md-10 pl-5 ">
-            <h1 className="home-text-center">All Recipes ...</h1>
+            <span className="home-text-center" style={{ fontFamily: "trail-font" }}>
+              All Recipes
+            </span>
             <div className="d-flex flex-wrap justify-content-around">
               {products?.map((p) => (
                 <div className={"card-1"} key={p._id}>
@@ -252,13 +254,13 @@ const HomePage = () => {
                   {/* </div> */}
 
                   <div className="product-details">
-                    <p className="product-price">Origin: {p.brand}</p>
                     <h3 className="product-name">Name: {p.name}</h3>
-                    <p className="product-price">Calories: {p.price}</p>
+                    <p className="product-descpription">Origin: {p.brand}</p>
+                    <p className="product-description">Calories: {p.price}</p>
                     {/* <p className="product-description">
                       <p className="topic">Description</p>
                       {p.description}</p> */}
-                    <p className="product-price">Type: {p.type}</p>
+                    <p className="product-description">Type: {p.type}</p>
                       {/* {p.description.substring(0, 30)}... */}
                     
                   </div>

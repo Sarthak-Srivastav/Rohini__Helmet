@@ -23,14 +23,17 @@
 }
 #item-1 {
   background-color: #000000;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
   margin-left: 30px;
   border-left: 2px solid #202020;
   border-right: 2px solid #202020;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   grid-row: 2 / 3;
   grid-column: 1 / 4;
 }
-#item-2 {
+/* #item-2 {
   background-color: #000000;
   margin-left: 30px;
   border-left: 2px solid #202020;
@@ -42,10 +45,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding-bottom: 30px; */
   grid-row: 3 / 4;
   grid-column: 1 / 4;
-}
+} */
 .footer-social-link h3 {
   display: flex;
   color: #ffffff;
@@ -214,11 +216,6 @@ input {
   grid-column: 7 / 10;
 }
 
-iframe {
-  border: 7px solid #000000;
-  border-radius: 20px;
-}
-
 #item-5 {
   padding-top: 5px;
   padding-left: -10px;
@@ -250,13 +247,12 @@ iframe {
 .footer-info-text {
   display: flex;
   text-align: center;
-  padding-left: 30px;
-  padding-right: 30px;
+  justify-content: center;
   font-family: "Nunito", sans-serif;
-  font-size: 18px;
+  font-size: 22px;
   color: rgb(182, 182, 182);
   line-height: 28px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .facebook:hover {
