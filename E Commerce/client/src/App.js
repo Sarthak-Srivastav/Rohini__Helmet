@@ -25,8 +25,6 @@ import CategoryProduct from "./pages/CategoryProduct";
 import CartPage from "./pages/CartPage";
 import AdminOrders from "./pages/admin/AdminOrders";
 
-// import ChatComponent from "./components/layout/ChatComponent";
-
 function App() {
   return (
     <>
