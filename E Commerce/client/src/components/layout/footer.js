@@ -148,7 +148,7 @@ const Footer = () => {
                 cursor: "pointer",
               }}
             >
-              Flavor Fusion
+              Flavorrr Fusion
             </span>
           </NavLink>
         </div>
