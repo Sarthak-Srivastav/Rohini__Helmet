@@ -2,8 +2,7 @@
 
 /* @font-face {
   font-family: "Blackboard";
-  src: local("Blackboard"),
-    url("./fonts/Blackboard.otf") format("truetype");
+  src: url('../fonts/Blackboard.otf') format('Blackboard')
 } */
 
 .text-center{
@@ -87,13 +86,14 @@
 
 #p-t-description{
   color: #c9c9c9;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 #p-description{
   color:rgb(206, 206, 206);
   font-weight: 800px;
-  font-size: 15px;
+  word-spacing: 15px;
+  font-size: 25px;
 }
 #p-price{
   color:#cfcfcf;

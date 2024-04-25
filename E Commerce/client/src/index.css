@@ -125,6 +125,33 @@ button.navbar-toggler {
   src: local("trail_font"),
     url("./fonts/Trail_font.otf") format("truetype");
 }
+@font-face {
+  font-family: "Blackboard";
+  src: local("Blackboard"),
+    url("./fonts/Trail_font.otf") format("truetype");
+}
+
+
+@font-face {
+  font-family: "Chalkboy";
+  src: local("ChalkboyRegular-vmXe7"),
+    url("./fonts/ChalkboyRegular-vmXe7.otf") format("truetype");
+}
+@font-face {
+  font-family: "Chalktasticitalic";
+  src: local("Chalktasticitalic-YYA4"),
+    url("./fonts/ChalktasticItalic-YYA4.ttf") format("truetype");
+}
+@font-face {
+  font-family: "HelloWorld";
+  src: local("Helloworld-ovvY0"),
+    url("./fonts/Helloworld-ovvY0.ttf") format("truetype");
+}
+@font-face {
+  font-family: "KgHolocene";
+  src: local("KgHoloceneRegular-lgjKy"),
+    url("./fonts/KgHoloceneRegular-lgjKy.ttf") format("truetype");
+}
 
 .navbar-nav {
   list-style: none;

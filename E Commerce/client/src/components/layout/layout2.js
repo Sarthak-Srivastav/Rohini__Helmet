@@ -24,9 +24,9 @@
 
 // Layout2.defaultProps = {
 //   title: "Helmets",
-//   description: "Helmets and other bike accesories",
-//   keywords: "mern,react,node,express,react,helmets,bike",
-//   author: "Rohini Helmet",
+//   description: "Flavor your Recipes",
+//   keywords: "mern,react,node,express,react,Recipes,food",
+//   author: "Flavor fusion",
 // };
 // export default Layout2;
 
@@ -53,10 +53,10 @@ const Layout2 = ({ children, title, description, keywords, author }) => {
 };
 
 Layout2.defaultProps = {
-  title: "Helmets",
+  title: "Flavor Fusion",
   description: "Helmets and other bike accessories",
   keywords: "mern, react, node, express, react, helmets, bike",
-  author: "Rohini Helmet",
+  author: "Flavor fusion",
 };
 
 export default Layout2;

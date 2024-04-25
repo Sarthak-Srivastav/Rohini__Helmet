@@ -2,7 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useAuth } from "../../context/Auth";
 import toast from "react-hot-toast";
-import logo from "../../image/helmet.png";
+// import logo from "../../image/helmet.png";
 import "../../fonts/Lost_Treasure.otf";
 import SearchInput from "../forms/SearchInput";
 import useCategory from "../../hooks/useCategory";

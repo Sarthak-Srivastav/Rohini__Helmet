@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Layout from "../components/layout/layout";
-// import  "./src/styles/fonts/Blackboard.otf";
+
+// import "../fonts/Blackboard.otf";
+// import "../fonts/ChalkboyRegular-vmXe7.otf";
+// import "../fonts/ChalktasticItalic-YYA4.ttf";
+// import "../fonts/Helloworld-ovvY0.ttf";
+import "../fonts/KgHoloceneRegular-lgjKy.ttf";
+
 import { useParams, useNavigate } from "react-router-dom";
 import { useCart } from "../context/cart";
 import { toast } from "react-hot-toast";
@@ -48,95 +54,118 @@ const ProductDetails = () => {
   };
   return (
     <Layout>
-        <div className="container-fluid">
-          <div className="row">
-            <div className="more-d-box">
-              <div className="col-md-5 detail-box">
-                <img
-                  src={`/api/v1/product/product-photo/${product._id}`}
-                  className="card-img-top"
-                  alt={product.name}
-                  // height="300"
-                  // width={"350px"}
-                />
-                <div className="product-detail-box">
-                  <h1 id="p-name">Name: {product.name}</h1>
-                  <h1 id="p-brand">Origin: {product.brand}</h1>
-                  {/* <h1 id="p-name">Shipping: {product.shipping ? "Yes" : "No"}</h1> */}
-                  <h6 id="p-category">Category : {product?.category?.name}</h6>
-                  <h3 id="p-description">
-                    <h6 id="p-t-description">Recipe Instruction</h6>
-                    {product.description}
-                  </h3>
-                  <h6 id="p-price">Calories: {product.price}</h6>
-                  <h6 id="p-price">Type: {product.type}</h6>
-                  {/* <button className="btn btn-dark ms-2">
+      <div className="container-fluid">
+        <div className="row">
+          <div className="more-d-box">
+            <div className="col-md-5 detail-box"
+            // className="col-md-7 detail-box-2_1 logo-font"
+            style={{
+              color: "white",
+              fontSize: "27px",
+              // fontFamily: "Blackboard",
+              // fontFamily: "HelloWorld",
+              // fontFamily: "Chalkboy",
+              // fontFamily: "Chalktasticitalic",
+              fontFamily: "KgHolocene",
+              cursor: "pointer",
+              marginRight: "30px",
+              marginLeft: "20px",
+            }}>
+              <img
+                src={`/api/v1/product/product-photo/${product._id}`}
+                className="card-img-top"
+                alt={product.name}
+                // height="300"
+                // width={"350px"}
+              />
+              <div className="product-detail-box">
+                <h1 id="p-name">Name: {product.name}</h1>
+                <h1 id="p-brand">Origin: {product.brand}</h1>
+                {/* <h1 id="p-name">Shipping: {product.shipping ? "Yes" : "No"}</h1> */}
+                <h6 id="p-category">Category : {product?.category?.name}</h6>
+
+                <h6 id="p-price">Calories: {product.price}</h6>
+                <h6 id="p-price">Type: {product.type}</h6>
+                {/* <button className="btn btn-dark ms-2">
                     Add to Favorites ❤️
                   </button> */}
-
-                </div>
               </div>
-              <div className="col-md-7 detail-box-2_1">
-                {/* <h1 className="text-center">Product Details</h1> */}
-                
-              </div>
+            </div>
+            <div
+              className="col-md-7 detail-box-2_1 logo-font"
+              style={{
+                color: "white",
+                fontSize: "27px",
+                // fontFamily: "Blackboard",
+                // fontFamily: "HelloWorld",
+                // fontFamily: "Chalkboy",
+                // fontFamily: "Chalktasticitalic",
+                fontFamily: "KgHolocene",
+                cursor: "pointer",
+                marginRight: "30px",
+                marginLeft: "20px",
+              }}
+            >
+              {/* <h1 className="text-center">Product Details</h1> */}
+              <h3 id="p-description">
+                <h6 id="p-t-description">Recipe Instruction</h6>
+                {product.description}
+              </h3>
             </div>
           </div>
         </div>
-        <hr />
+      </div>
+      <hr />
 
-        <div>
-          <h3 className="text-center">Similar Products</h3>
-          {relatedProducts.length < 1 && (
-            <p className="text-center">No Similar Product Found</p>
-          )}
+      <div>
+        <h3 className="text-center">Similar Products</h3>
+        {relatedProducts.length < 1 && (
+          <p className="text-center">No Similar Product Found</p>
+        )}
 
-          <div className="d-flex flex-wrap justify-content-around">
-            {relatedProducts?.map((p) => (
-              <div className={"card-1"} key={p._id}>
-                <div className="product-image-container">
-                  <img
-                    className="product-image"
-                    src={`/api/v1/product/product-photo/${p?._id}`}
-                    alt="Product Image"
-                  />
-                </div>
-                <div className="product-details">
-                  <h3 className="product-name">{p.name}</h3>
-                  <p className="product-description">
-                    {p.description.substring(0, 30)}...
-                  </p>
-                  <p className="product-price">₹ {p.price}</p>
-                </div>
-                <div className="buttons-container">
-                  <button
-                    className="button"
-                    onClick={() => {
-                      navigate(`/product/${p.slug}`);
-                      scrollToTop();
-                    }}
-                  >
-                    More Details
-                  </button>
-                  <button
-                    className="button"
-                    onClick={() => {
-                      setCart([...cart, p]);
-                      localStorage.setItem(
-                        "cart",
-                        JSON.stringify([...cart, p])
-                      );
-                      toast.success("Product Added To Cart");
-                    }}
-                  >
-                    Add to Cart
-                  </button>
-                </div>
+        <div className="d-flex flex-wrap justify-content-around">
+          {relatedProducts?.map((p) => (
+            <div className={"card-1"} key={p._id}>
+              <div className="product-image-container">
+                <img
+                  className="product-image"
+                  src={`/api/v1/product/product-photo/${p?._id}`}
+                  alt="Product Image"
+                />
               </div>
-            ))}
-          </div>
+              <div className="product-details">
+                <h3 className="product-name">{p.name}</h3>
+                <p className="product-description">
+                  {p.description.substring(0, 30)}...
+                </p>
+                <p className="product-price">₹ {p.price}</p>
+              </div>
+              <div className="buttons-container">
+                <button
+                  className="button"
+                  onClick={() => {
+                    navigate(`/product/${p.slug}`);
+                    scrollToTop();
+                  }}
+                >
+                  More Details
+                </button>
+                <button
+                  className="button"
+                  onClick={() => {
+                    setCart([...cart, p]);
+                    localStorage.setItem("cart", JSON.stringify([...cart, p]));
+                    toast.success("Product Added To Cart");
+                  }}
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
 
-          {/* <div className="d-flex flex wrap">
+        {/* <div className="d-flex flex wrap">
           {relatedProducts?.map((p) => (
             <div className="card m-2" style={{ width: "18rem" }}>
               <img
@@ -154,7 +183,7 @@ const ProductDetails = () => {
             </div>
           ))}
         </div> */}
-        </div>
+      </div>
     </Layout>
   );
 };

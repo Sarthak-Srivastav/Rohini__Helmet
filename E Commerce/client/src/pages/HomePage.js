@@ -125,7 +125,7 @@ const HomePage = () => {
     }
   };
   return (
-    <Layout title={"All Products"}>
+    <Layout title={"All Recipes"}>
       <div className="App">
         <ImageSlider
           images={images}
@@ -237,7 +237,10 @@ const HomePage = () => {
             </div> */}
 
           <div className="col-md-10 pl-5 ">
-            <span className="home-text-center" style={{ fontFamily: "trail-font" }}>
+            <span
+              className="home-text-center"
+              style={{ fontFamily: "trail-font" }}
+            >
               All Recipes
             </span>
             <div className="d-flex flex-wrap justify-content-around">
@@ -261,8 +264,7 @@ const HomePage = () => {
                       <p className="topic">Description</p>
                       {p.description}</p> */}
                     <p className="product-description">Type: {p.type}</p>
-                      {/* {p.description.substring(0, 30)}... */}
-                    
+                    {/* {p.description.substring(0, 30)}... */}
                   </div>
                   <div className="buttons-container">
                     <button
