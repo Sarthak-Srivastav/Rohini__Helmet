@@ -57,20 +57,22 @@ const ProductDetails = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="more-d-box">
-            <div className="col-md-5 detail-box"
-            // className="col-md-7 detail-box-2_1 logo-font"
-            style={{
-              color: "white",
-              fontSize: "27px",
-              // fontFamily: "Blackboard",
-              // fontFamily: "HelloWorld",
-              // fontFamily: "Chalkboy",
-              // fontFamily: "Chalktasticitalic",
-              fontFamily: "KgHolocene",
-              cursor: "pointer",
-              marginRight: "30px",
-              marginLeft: "20px",
-            }}>
+            <div
+              className="col-md-5 detail-box"
+              // className="col-md-7 detail-box-2_1 logo-font"
+              style={{
+                color: "white",
+                fontSize: "27px",
+                // fontFamily: "Blackboard",
+                // fontFamily: "HelloWorld",
+                // fontFamily: "Chalkboy",
+                // fontFamily: "Chalktasticitalic",
+                fontFamily: "KgHolocene",
+                cursor: "pointer",
+                marginRight: "30px",
+                marginLeft: "20px",
+              }}
+            >
               <img
                 src={`/api/v1/product/product-photo/${product._id}`}
                 className="card-img-top"
@@ -79,8 +81,8 @@ const ProductDetails = () => {
                 // width={"350px"}
               />
               <div className="product-detail-box">
-                <h1 id="p-name">Name: {product.name}</h1>
-                <h1 id="p-brand">Origin: {product.brand}</h1>
+                <h6 id="p-name">Name: {product.name}</h6>
+                <h6 id="p-brand">Origin: {product.brand}</h6>
                 {/* <h1 id="p-name">Shipping: {product.shipping ? "Yes" : "No"}</h1> */}
                 <h6 id="p-category">Category : {product?.category?.name}</h6>
 
@@ -104,12 +106,13 @@ const ProductDetails = () => {
                 cursor: "pointer",
                 marginRight: "30px",
                 marginLeft: "20px",
+                overflowWrap: "break-word",
               }}
             >
               {/* <h1 className="text-center">Product Details</h1> */}
               <h3 id="p-description">
                 <h6 id="p-t-description">Recipe Instruction</h6>
-                {product.description}
+                <pre>{product.description}</pre>
               </h3>
             </div>
           </div>

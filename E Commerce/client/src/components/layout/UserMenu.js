@@ -17,12 +17,12 @@ const UserMenu = () => {
               <CgProfile size={24} />
               <span className="ml-2"> Profile</span>
             </NavLink>
-            <NavLink
+            {/* <NavLink
               to="/dashboard/user/orders"
               className="list-group-item list-group-item-action  d-flex justify-content-start align-items-center"
             >
               <BsCart3 size={24} /> <span className="ml-2">Orders</span>
-            </NavLink>
+            </NavLink> */}
           </div>
         </div>
       </div>

@@ -196,7 +196,7 @@ const CreateProduct = () => {
               {/* <div className="mb-3">
                 <input
                   type="number"
-                  value={quantity}
+                  value={quantity}  
                   placeholder="write a quantity"
                   className="form-control"
                   onChange={(e) => setQuantity(e.target.value)}
