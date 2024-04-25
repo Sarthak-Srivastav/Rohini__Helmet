@@ -226,7 +226,7 @@ const Footer = () => {
                   className="li-1 footer-social-link facebook"
                   to="https://www.facebook.com/HelmetMusic/"
                 >
-                  <FaFacebookF size={"22px"} />
+                  <FaFacebookF size={"30px"} />
                 </Link>
               </li>
               <li className="li-1">
@@ -234,7 +234,7 @@ const Footer = () => {
                   className="li-1 footer-social-link instagram"
                   to="https://www.instagram.com/helmets_for_india/?hl=en"
                 >
-                  <FaInstagram size={"22px"} />
+                  <FaInstagram size={"30px"} />
                 </Link>
               </li>
               <li className="li-1">
@@ -242,7 +242,7 @@ const Footer = () => {
                   className="li-1 footer-social-link whatsapp"
                   to="Whatsapp"
                 >
-                  <FaWhatsapp size={"22px"} />
+                  <FaWhatsapp size={"30px"} />
                 </Link>
               </li>
             </ul>

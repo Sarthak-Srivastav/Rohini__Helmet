@@ -62,7 +62,7 @@ const Header = () => {
                   className="logo-font"
                   style={{
                     color: "white",
-                    fontSize: "27px",
+                    fontSize: "35px",
                     fontFamily: "lost-treasure",
                     cursor: "pointer",
                     marginRight: "30px",
@@ -113,6 +113,8 @@ const Header = () => {
                     ))}
                   </ul>
                 </li>
+
+                <SearchInput />
 
                 {!auth?.user ? (
                   <>
@@ -172,7 +174,7 @@ const Header = () => {
                     </NavLink>
                   </Badge>
                 </li>
-                <SearchInput />
+                
               </ul>
             </div>
           </div>

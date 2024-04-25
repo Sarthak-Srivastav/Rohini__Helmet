@@ -223,7 +223,7 @@ const CreateProduct = () => {
               </div> */}
               <div className="mb-3">
                 <button className="CreateBtn" onClick={handleCreate}>
-                  CREATE PRODUCT
+                  CREATE RECIPE
                 </button>
               </div>
             </div>
