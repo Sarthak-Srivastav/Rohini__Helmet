@@ -1,42 +1,47 @@
 export const prices = [
   {
     _id: 0,
-    name: "₹0 to 999",
-    array: [0, 999],
+    name: "0 to 50",
+    array: [0, 49],
   },
   {
     _id: 1,
-    name: "₹1000 to 1999",
-    array: [1000, 1999],
+    name: "50 to 100",
+    array: [50, 99],
   },
   {
     _id: 2,
-    name: "₹2000 to 2999",
-    array: [2000, 2999],
+    name: "100 to 150",
+    array: [100, 149],
   },
   {
     _id: 3,
-    name: "₹3000 to 3999",
-    array: [3000, 3999],
+    name: "150 to 200",
+    array: [150, 199],
   },
   {
     _id: 4,
-    name: "₹4000 to 4999",
-    array: [4000, 4999],
+    name: "200 to 250",
+    array: [200, 249],
   },
   {
     _id: 5,
-    name: "₹5000 to 5999",
-    array: [5000, 5999],
+    name: "250 to 300",
+    array: [250, 299],
   },
   {
     _id: 6,
-    name: "₹6000 to 6999",
-    array: [6000, 6999],
+    name: "300 to 350",
+    array: [300, 349],
   },
   {
     _id: 7,
-    name: "₹7000 or more",
-    array: [7000, 99999],
+    name: "350 to 400",
+    array: [350, 399],
+  },
+  {
+    _id: 8,
+    name: "400 to 450",
+    array: [400, 99999],
   },
 ];

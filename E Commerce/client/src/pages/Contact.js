@@ -114,7 +114,7 @@ const Contact = () => {
           <p className="mt-3">
             <Link
               className="social-link instagram"
-              to="https://www.instagram.com/helmets_for_india/?hl=en"
+              to="https://www.instagram.com/flavor_fussion"
             >
               <FiInstagram /> : Instagram
             </Link>
@@ -122,13 +122,13 @@ const Contact = () => {
           <p className="mt-3">
             <Link
               className="social-link facebook"
-              to="https://www.facebook.com/HelmetMusic/"
+              to="https://www.facebook.com/flavor_fussion/"
             >
               <FaSquareFacebook /> : Facebook
             </Link>
           </p>
           <p className="mt-3">
-            <Link className="social-link whatsapp" to="Whatsapp">
+            <Link className="social-link whatsapp" to="https://wa.me//919999900000">
               <FaWhatsapp /> : Whatsapp
             </Link>
           </p>
