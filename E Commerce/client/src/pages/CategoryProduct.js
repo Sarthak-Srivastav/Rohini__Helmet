@@ -42,12 +42,14 @@ const CategoryProduct = () => {
                     />
                   </div>
                   <div className="product-details">
-                    <h3 className="product-name">{p.name}</h3>
-                    <p className="product-description">
-                      {p.description}
-                      {/* {p.description.substring(0, 30)}... */}
-                    </p>
-                    <p className="product-price">₹ {p.price}</p>
+                    <h3 className="product-name">Name: {p.name}</h3>
+                    <p className="product-descpription">Origin: {p.brand}</p>
+                    <p className="product-description">Calories: {p.price}</p>
+                    {/* <p className="product-description">
+                      <p className="topic">Description</p>
+                      {p.description}</p> */}
+                    <p className="product-description">Type: {p.type}</p>
+                    {/* {p.description.substring(0, 30)}... */}
                   </div>
                   <div className="buttons-container">
                     <button

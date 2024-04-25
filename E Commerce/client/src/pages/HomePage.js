@@ -181,7 +181,7 @@ const HomePage = () => {
             </div>
             <div className="filter-container">
               <div className="filter-section">
-                <h4 className="filter-heading">Filter by price</h4>
+                <h4 className="filter-heading">Filter by Calories</h4>
                 <div className="radio-group-container">
                   <Radio.Group onChange={(e) => setRadio(e.target.value)}>
                     {prices?.map((p) => (

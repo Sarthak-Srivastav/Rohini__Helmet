@@ -13,7 +13,7 @@ const Search = () => {
             <h1>Search Resuts</h1>
             <h6>
               {values?.results.length < 1
-                ? "No Products Found"
+                ? "No Recipes Found"
                 : `Found ${values?.results.length}`}
             </h6>
           </div>
@@ -28,12 +28,15 @@ const Search = () => {
                   />
                 </div>
                 <div className="product-details">
-                  <h3 className="product-name">{p.name}</h3>
-                  <p className="product-description">
-                    {p.description.substring(0, 30)}...
-                  </p>
-                  <p className="product-price">₹ {p.price}</p>
-                </div>
+                    <h3 className="product-name">Name: {p.name}</h3>
+                    <p className="product-descpription">Origin: {p.brand}</p>
+                    <p className="product-description">Calories: {p.price}</p>
+                    {/* <p className="product-description">
+                      <p className="topic">Description</p>
+                      {p.description}</p> */}
+                    <p className="product-description">Type: {p.type}</p>
+                    {/* {p.description.substring(0, 30)}... */}
+                  </div>
                 <div className="buttons-container">
                   <button className="button">More Details</button>
                   <button className="button">Add to Cart</button>

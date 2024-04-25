@@ -121,9 +121,9 @@ const ProductDetails = () => {
       <hr />
 
       <div>
-        <h3 className="text-center">Similar Products</h3>
+        <h3 className="text-center">Similar Recipes</h3>
         {relatedProducts.length < 1 && (
-          <p className="text-center">No Similar Product Found</p>
+          <p className="text-center">No Similar Recipes Found</p>
         )}
 
         <div className="d-flex flex-wrap justify-content-around">
@@ -137,12 +137,15 @@ const ProductDetails = () => {
                 />
               </div>
               <div className="product-details">
-                <h3 className="product-name">{p.name}</h3>
-                <p className="product-description">
-                  {p.description.substring(0, 30)}...
-                </p>
-                <p className="product-price">₹ {p.price}</p>
-              </div>
+                    <h3 className="product-name">Name: {p.name}</h3>
+                    <p className="product-descpription">Origin: {p.brand}</p>
+                    <p className="product-description">Calories: {p.price}</p>
+                    {/* <p className="product-description">
+                      <p className="topic">Description</p>
+                      {p.description}</p> */}
+                    <p className="product-description">Type: {p.type}</p>
+                    {/* {p.description.substring(0, 30)}... */}
+                  </div>
               <div className="buttons-container">
                 <button
                   className="button"
