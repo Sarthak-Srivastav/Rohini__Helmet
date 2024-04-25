@@ -38,15 +38,14 @@ main {
   mask-image: linear-gradient(to bottom, transparent 25%, black 75%);
 } */
 
-
 h1 {
-  color: #ffffff;
+  color: #000000;
   text-transform: uppercase;
 }
 
 .home-text-center {
   /* border-bottom: 5px solid #007bff; */
-  background: -webkit-linear-gradient(300deg,#f50404,#5900ff);
+  background: -webkit-linear-gradient(300deg, #f50404, #5900ff);
   animation: gradient-animation 10s ease infinite;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -59,7 +58,6 @@ h1 {
   letter-spacing: 1px;
   margin-bottom: 10px;
 }
-
 
 /* font-family: 'Josefin Sans', sans-serif;
 font-family: 'Libre Baskerville', serif;
@@ -122,15 +120,12 @@ button.navbar-toggler {
 }
 @font-face {
   font-family: "trail-font";
-  src: local("trail_font"),
-    url("./fonts/Trail_font.otf") format("truetype");
+  src: local("trail_font"), url("./fonts/Trail_font.otf") format("truetype");
 }
 @font-face {
   font-family: "Blackboard";
-  src: local("Blackboard"),
-    url("./fonts/Trail_font.otf") format("truetype");
+  src: local("Blackboard"), url("./fonts/Trail_font.otf") format("truetype");
 }
-
 
 @font-face {
   font-family: "Chalkboy";
@@ -219,7 +214,7 @@ button.navbar-toggler {
   background-color: transparent;
   color: #ff00d9;
 }
-.dropdown-item.active{
+.dropdown-item.active {
   background-color: transparent;
 }
 
@@ -319,8 +314,8 @@ slider-container {
 }
 
 /*==============Loadmore==============*/
-#loadmore{
-  background-color:#232323;
+#loadmore {
+  background-color: #232323;
   color: #ff66f0;
   display: flex;
   align-items: center;
@@ -328,12 +323,11 @@ slider-container {
   text-transform: uppercase;
   border: none;
 }
-#loadmore:hover{
-  background-color: #232323         ;
-  color:#ffe9fd;
+#loadmore:hover {
+  background-color: #232323;
+  color: #ffe9fd;
   transform: scale(1.05);
 }
-
 
 /* =================================
 ======== page not found css ======= */
@@ -426,7 +420,6 @@ img {
   backdrop-filter: blur(10px);
 }
 
-
 /*=======================*/
 .product-link {
   text-decoration: none;
@@ -466,7 +459,7 @@ img {
   box-shadow: none;
 }
 
-.ManageCategory{
+.ManageCategory {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1027,17 +1020,17 @@ img {
   font-size: 22px;
 }
 /* ========= Cart-Page ========= */
-.summary{
+.summary {
   color: #ff2a00;
 }
 
-.btn-outline-warning{
+.btn-outline-warning {
   background: #3f008b;
-  width:auto;
+  width: auto;
 }
-.braintree-heading{
+.braintree-heading {
   color: #000000;
-  font-size:18px;
+  font-size: 18px;
 }
 .cart-card {
   position: relative;
@@ -1062,7 +1055,7 @@ img {
   border: none;
   padding: 15px 0; /* Adjust vertical padding to expand buttons vertically */
   width: 80%; /* Make buttons fill the entire line */
-  height:100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
   font-size: 25px;
@@ -1073,7 +1066,7 @@ img {
   transition: background 0.3s ease, transform 0.2s ease;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.177);
   display: flex;
-   /* Display buttons as block elements to expand horizontally */
+  /* Display buttons as block elements to expand horizontally */
 }
 
 .btn-glass:hover {
@@ -1099,7 +1092,7 @@ img {
   border-radius: 0;
 }
 
-.policy-page{
+.policy-page {
   color: #ffffff;
   padding: 20px;
   padding-bottom: 8%;
@@ -1112,7 +1105,7 @@ img {
 #policy-head {
   text-align: center;
   position: relative;
-  color: #fff;
+  color: #000000;
   font-size: 40px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -1130,16 +1123,27 @@ img {
   background: linear-gradient(130deg, #187cff, #af0095 41.07%, #ff8002 76.05%);
 }
 
-.policy-content{
+.policy-content {
+  
+  font-weight: 600;
+  color: #000000;
   display: inline;
   align-items: center;
   justify-content: center;
 }
 
-.policy-content p{
+.policy-content p {
+  
+  font-weight: 600;
   text-align: left;
 }
 
-.policy-content h3{
+.policy-content h2 {
+  color: #000000;
   text-align: left;
+}
+
+
+.text-justify {
+  font-weight: 600;
 }

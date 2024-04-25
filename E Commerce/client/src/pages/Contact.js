@@ -107,7 +107,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="col-md-4">
-          <h1 className="h1-back">CONTACT US</h1>
+          <h1 className="h1-back text-white">CONTACT US</h1>
           <p className="text-justify mt-2">
           Any Query And Info About Any Service Feel Free To Call Anytime We 24x7 Available
           </p>

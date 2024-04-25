@@ -16,13 +16,13 @@ const About = () => {
           <h1 className="c-text bg-dark p-2 text-white text-center">
             ABOUT US
           </h1>
-          <p className="text-white text-justify mt-3">
+          <p className="text-black text-justify mt-3 ">
             <p>
               Welcome to Flavor Fusion: We're thrilled to have you join us on
               our culinary journey!.
             </p>
           </p>
-          <p className="text-white text-justify mt-2">
+          <p className="text-black text-justify mt-2">
             <b>OUR STORY : </b>
             <br />
             Flavor Fusion Was Born Out Of A Shared Passion For Cooking. Our Team
@@ -30,7 +30,7 @@ const About = () => {
             Everyone, From Beginners To Seasoned Chefs, Can Find Inspiration And
             Joy In The Kitchen.
           </p>
-          <p className="text-white text-justify mt-2">
+          <p className="text-black text-justify mt-2">
             <b>WILD VARIETY : </b>
             <br />
             Explore Our Diverse Collection Of Recipes, Carefully Curated To
@@ -39,7 +39,7 @@ const About = () => {
             Looking For Healthy Meal Options, We've Got Something For You.
           </p>
 
-          <p className="text-white text-justify mt-2">
+          <p className="text-black text-justify mt-2">
             <b>LETS GET COOKING ! </b>
             <br />
             Whether You're Whipping Up A Quick Weeknight Dinner Or Preparing An
@@ -47,7 +47,7 @@ const About = () => {
             Go-to Destination For Culinary Inspiration And Satisfaction. Happy
             Cooking!
           </p>
-          <p className="text-white text-justify mt-2">
+          <p className="text-black text-justify mt-2">
             <b>QUALITY MATTERS : </b>
             <br />
             Every Recipe On [Your Recipe Website Name] Undergoes Rigorous
