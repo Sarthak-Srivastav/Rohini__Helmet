@@ -12,18 +12,56 @@ export const registerController = async (req, res) => {
     if (!name) {
       return res.send({ message: "Name is required" });
     }
+    // Name can start with a letter or underscore
+    if (!/^[a-zA-Z_]/.test(name)) {
+      return res.send({
+        message: "Name should start with a letter or underscore",
+      });
+    }
+
     if (!email) {
       return res.send({ message: "Email is required" });
     }
+    // Validate email format and domain
+    if (
+      !/\S+@(gmail\.com|yahoo\.com|hotmail\.com|outlook\.com|jimsindia.org)\b/.test(
+        email
+      )
+    ) {
+      return res.send({
+        message:
+          "Invalid email format or domain. Please use a popular email domain such as Gmail, Yahoo, Hotmail, or Outlook.",
+      });
+    }
+
     if (!password) {
       return res.send({ message: "Password is required" });
     }
+    // Password should be minimum 8 characters and maximum 30 characters,
+    // and should contain at least one uppercase letter, one lowercase letter, one number, and one special character
+    if (
+      !/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,30}/.test(
+        password
+      )
+    ) {
+      return res.send({
+        message:
+          "Password must be 8-30 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character",
+      });
+    }
+
     if (!phone) {
       return res.send({ message: "Phone No. is required" });
     }
+    // Phone number should be 10 digits
+    if (!/^\d{10}$/.test(phone)) {
+      return res.send({ message: "Phone number should be 10 digits" });
+    }
+
     if (!address) {
       return res.send({ message: "Address is required" });
     }
+
     if (!answer) {
       return res.send({ message: "Answer is required" });
     }

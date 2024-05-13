@@ -62,7 +62,7 @@ const Header = () => {
                   className="logo-font"
                   style={{
                     color: "white",
-                    fontSize: "35px",
+                    fontSize: "25px",
                     fontFamily: "lost-treasure",
                     cursor: "pointer",
                     marginRight: "30px",
