@@ -119,6 +119,7 @@ h2 {
   /* background: linear-gradient(135deg, #88ff00, #ffffff); */
   background: linear-gradient(130deg, #ff7a18, #af002d 41.07%, #319197 76.05%);
 }
+
 #heading-2::before {
   /* Adjust the thickness and color as needed */
   content: "";
@@ -151,7 +152,6 @@ h2 {
 }
 
 .footer-menu a {
-  border: 2px solid #636363;
   border-radius: 30px;
   margin: 5px;
   padding: 15px 15px;
