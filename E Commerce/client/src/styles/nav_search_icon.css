@@ -13,28 +13,28 @@
   width: 350px; 
   padding: 8px;
   outline: none;
-  border: 1px solid #fdfdfd;
+  /* border: 1px solid #fdfdfd; */
   border-radius: 20px;
   transition: 0.5s ease-in-out;
-  background-color: #2d2d2d3c;
-  /* box-shadow: 0px 0px 3px #f3f3f3; */
+  background-color: #ffffffe2;
+  box-shadow: 0px 0px 3px #2d2d2d;
   padding-right: 40px;
-  color: #ffffff;
+  color: #161616;
 }
 
 .input::placeholder,
 .input {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  font-size: 17px;
+  font-size: 19px;
 }
 
 .input::placeholder {
-  color: #8f8f8f;
+  color: #363636;
 }
 
 .icon {
-  color: #ffffff;
+  color: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,8 +56,8 @@
   box-shadow: none;
   width: 400px;
   border-radius: 20px;
-  background-color: #2d2d2d6f;
-  border: 0.5px solid #ffd900;
-  border-bottom: 4px solid #ffd900;
+  background-color: #bababa6f;
+  /* border: 0.5px solid #ffd900; */
+  border-bottom: 4px solid #333333;
   transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }

@@ -45,7 +45,7 @@ h1 {
 
 .home-text-center {
   /* border-bottom: 5px solid #007bff; */
-  background: -webkit-linear-gradient(300deg, #feae00, #d400ff);
+  background: -webkit-linear-gradient(300deg, #222222, #b900de);
   animation: gradient-animation 10s ease infinite;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -53,7 +53,7 @@ h1 {
   display: flex;
   justify-content: center;
   font-weight: 600;
-  font-size: 90px;
+  font-size: 60px;
   margin-top: none;
   letter-spacing: 1px;
   margin-bottom: 10px;
@@ -74,17 +74,22 @@ font-family: 'Roboto Slab', serif; */
   gap: 5px;
 }
 
+.logo-font{
+  display: inline-block;
+  white-space: nowrap;
+}
+
 .navbar {
   /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
   /* background-color: black; */
   width: 60%;
   margin: 0 auto; /* This centers the navbar horizontally */
-  border-radius: 50px;
+  border-radius: 25px;
   font-family: var(--font-default);
   font-size: 18px;
   line-height: 26px;
   padding: 15px 20px;
-  background: linear-gradient(300deg, #353535, #070606, #232323);
+  /* background: linear-gradient(300deg, #353535, #070606, #232323); */
   background-size: 180% 180%;
   animation: gradient-animation 20s ease infinite;
   margin-top: 10px;
@@ -175,47 +180,49 @@ button.navbar-toggler {
 
 .nav-link {
   text-decoration: none;
-  color: #ffe8e8;
+  color: #1c1c1c;
+  font-size: 23px;
   font-weight: 600;
   transition: color 0.3s;
 }
 .dropdown-toggle.active.show {
-  color: #cfcfcf;
+  color: #1f1f1f;
 }
 .navbar-nav .nav-link:hover {
-  color: rgb(255, 70, 215);
+  color: rgb(175, 0, 137);
 }
 .navbar-nav .nav-link.active {
-  color: #ad3ffc;
+  color: #9100f9;
 }
 .nav-link-2 {
   text-decoration: none;
-  color: #fefefe;
+  color: #1c1c1c;
+  font-size: 23px;
   font-weight: 600;
   transition: color 0.3s;
 }
 .nav-link-2:hover {
-  color: rgb(255, 70, 215);
+  color: rgb(208, 0, 163);
 }
 .nav-link-2.dropdown-toggle.show {
-  color: #cfcfcf;
+  color: #1d1d1d;
 }
 
 .dropdown-menu.show {
-  background: rgba(0, 0, 0, 0.661);
+  background: rgba(255, 255, 255, 0.833);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(15.6px);
   border: 1px solid rgba(89, 89, 89, 0.822);
 }
 .dropdown-item {
-  color: #fff;
+  color: #000000;
   font-size: large;
 }
 .dropdown-item:hover {
   width: 100%;
   background-color: transparent;
-  color: #ff00d9;
+  color: #ac0092;
 }
 .dropdown-item.active {
   background-color: transparent;
@@ -1022,7 +1029,8 @@ img {
 } */
 
 .cart-count {
-  font-size: 22px;
+  font-size: 23px;
+  font-weight: 600;
 }
 /* ========= Cart-Page ========= */
 .summary {

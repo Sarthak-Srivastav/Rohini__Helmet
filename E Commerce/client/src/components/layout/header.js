@@ -61,8 +61,8 @@ const Header = () => {
                 <span
                   className="logo-font"
                   style={{
-                    color: "white",
-                    fontSize: "35px",
+                    color: "black",
+                    fontSize: "28px",
                     fontFamily: "lost-treasure",
                     cursor: "pointer",
                     marginRight: "30px",

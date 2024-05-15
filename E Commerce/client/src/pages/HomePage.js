@@ -237,12 +237,15 @@ const HomePage = () => {
             </div> */}
 
           <div className="col-md-10 pl-5 ">
-            <span
+            {/* <span
               className="home-text-center"
               style={{ fontFamily: "trail-font" }}
-            >
-              All Recipes
-            </span>
+            > */}
+            <span
+              className="home-text-center">
+              RECIPES
+              </span>
+            {/* </span> */}
             <div className="d-flex flex-wrap justify-content-around">
               {products?.map((p) => (
                 <div className={"card-1"} key={p._id}>
