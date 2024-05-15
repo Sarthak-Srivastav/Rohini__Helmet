@@ -12,6 +12,7 @@ import ForgetPassword from "./pages/Auth/ForgetPassword";
 import AdminRoute from "./components/Routes/AdminRoute";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import Users from "./pages/admin/User";
+import Messages from "./pages/admin/Messages";
 import CreateProduct from "./pages/admin/CreateProduct";
 import CreateCategory from "./pages/admin/CreateCategory";
 import Orders from "./pages/user/Orders";
@@ -42,6 +43,7 @@ function App() {
           <Route path="admin/product/:slug" element={<UpdateProduct />} />
           <Route path="admin/products" element={<Products />} />
           <Route path="admin/users" element={<Users />} />
+          <Route path="admin/Messages" element={<Messages />} />
           <Route path="admin/orders" element={<AdminOrders />} />
         </Route>
 

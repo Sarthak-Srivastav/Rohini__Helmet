@@ -131,7 +131,7 @@ const HomePage = () => {
           images={images}
           interval={5000}
           width="100%"
-          height="750px"
+          height="700px"
         />
       </div>
       <div className="container-fluid row">
