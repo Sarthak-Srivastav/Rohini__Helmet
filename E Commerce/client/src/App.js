@@ -26,9 +26,22 @@ import CategoryProduct from "./pages/CategoryProduct";
 import CartPage from "./pages/CartPage";
 import AdminOrders from "./pages/admin/AdminOrders";
 
+import React, { useState } from "react";
+import ButtonComponent from "./components/chatbot/ButtonComponent";
+import WindowComponent from "./components/chatbot/WindowComponent";
+
 function App() {
+  const [showWindow, setShowWindow] = useState(false);
+
+  const toggleWindow = () => {
+    setShowWindow(!showWindow);
+  };
   return (
     <>
+      <div>
+        <ButtonComponent onClick={toggleWindow} />
+        {showWindow && <WindowComponent />}
+      </div>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/product/:slug" element={<ProductDetails />} />
