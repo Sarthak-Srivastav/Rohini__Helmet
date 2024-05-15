@@ -8,6 +8,7 @@ import SearchInput from "../forms/SearchInput";
 import useCategory from "../../hooks/useCategory";
 import { useCart } from "../../context/cart";
 import { Badge } from "antd";
+import { FaHome } from "react-icons/fa";
 
 import { FiAlignJustify } from "react-icons/fi";
 
@@ -84,7 +85,8 @@ const Header = () => {
                     aria-current="page"
                     href="#"
                   >
-                    Home
+                    <FaHome />  Home
+                    
                   </NavLink>
                 </li>
                 <li className="nav-item dropdown">
