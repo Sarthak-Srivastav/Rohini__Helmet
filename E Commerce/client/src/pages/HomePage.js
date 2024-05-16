@@ -10,6 +10,8 @@ import { useCart } from "../context/cart";
 import { toast } from "react-hot-toast";
 import "../styles/filters.css";
 import ImageSlider from "../components/layout/imageSlider";
+import { cookingTips } from "../pages/tips";
+import { IoMdRefresh } from "react-icons/io";
 
 // import image1 from "";
 // import image2 from "../images/1112.jpg";
@@ -36,6 +38,25 @@ const HomePage = () => {
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(1);
+  const [tipOfTheDay, setTipOfTheDay] = useState("");
+  const [tipIndex, setTipIndex] = useState(0);
+
+  // Function to get a random cooking tip
+  const getRandomTip = () => {
+    const randomIndex = Math.floor(Math.random() * cookingTips.length);
+    return cookingTips[randomIndex];
+  };
+
+  // Function to get the next cooking tip
+  const getNextTip = () => {
+    const nextIndex = (tipIndex + 1) % cookingTips.length;
+    setTipIndex(nextIndex);
+    setTipOfTheDay(cookingTips[nextIndex]);
+  };
+
+  useEffect(() => {
+    setTipOfTheDay(getRandomTip());
+  }, []);
 
   // get all category
   const getAllCategory = async () => {
@@ -126,6 +147,16 @@ const HomePage = () => {
   };
   return (
     <Layout title={"All Recipes"}>
+      <div className="tip-of-the-day">
+        <div className="tip-content">
+          <h2>Cooking Tip of the Day</h2>
+          <p>{tipOfTheDay}</p>
+        </div>
+        <button className="next-tip-button" onClick={getNextTip}>
+          <IoMdRefresh />
+        </button>
+      </div>
+
       <div className="App">
         <ImageSlider
           images={images}
@@ -134,6 +165,7 @@ const HomePage = () => {
           height="700px"
         />
       </div>
+
       <div className="container-fluid row">
         <div className="row mt-2">
           <div className="col-md-2">
