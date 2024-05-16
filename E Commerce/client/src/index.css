@@ -1178,8 +1178,8 @@ img {
   justify-content: center;
   background-color: #696969ca;
   border-radius: 50px;
-  width:150px;
-  height:40px;
+  width:130px;
+  height:30px;
 }
 
 .dot {
@@ -1187,7 +1187,7 @@ img {
   width: 10px;
   background-color: #ffffff;
   border-radius: 50%;
-  margin: 0 5px;
+  margin: 0 4px;
   cursor: pointer;
 }
 

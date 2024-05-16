@@ -212,11 +212,11 @@
   font-weight: bold; /* Set font weight to bold */
   /* border: 2px solid rgb(92, 92, 92); */
   overflow: hidden;
-  width: 400px;
-  margin: 20px;
+  width: 350px;
+  margin: 10px;
   min-height: 500px;
   height: 50%;
-  max-height: 600px;
+  max-height: 550px;
   /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   background: rgba(0, 0, 0, 0.064);
   backdrop-filter: blur(5px);
