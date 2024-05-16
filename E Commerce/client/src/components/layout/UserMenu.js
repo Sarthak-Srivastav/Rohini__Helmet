@@ -17,6 +17,13 @@ const UserMenu = () => {
               <CgProfile size={24} />
               <span className="ml-2"> Profile</span>
             </NavLink>
+            <NavLink
+              to="/dashboard/user/favorite"
+              className="list-group-item list-group-item-action d-flex justify-content-start align-items-center"
+            >
+              <CgProfile size={24} />
+              <span className="ml-2"> Favorite</span>
+            </NavLink>
             {/* <NavLink
               to="/dashboard/user/orders"
               className="list-group-item list-group-item-action  d-flex justify-content-start align-items-center"

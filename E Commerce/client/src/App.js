@@ -29,6 +29,7 @@ import AdminOrders from "./pages/admin/AdminOrders";
 import React, { useState } from "react";
 import ButtonComponent from "./components/chatbot/ButtonComponent";
 import WindowComponent from "./components/chatbot/WindowComponent";
+import UserFav from "./pages/user/UserFav";
 
 function App() {
   const [showWindow, setShowWindow] = useState(false);
@@ -46,7 +47,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/product/:slug" element={<ProductDetails />} />
         <Route path="/categories" element={<Categories />} />
-        <Route path="/cart" element={<CartPage />} />
+        {/* <Route path="/Favorite" element={<CartPage />} /> */}
         <Route path="/category/:slug" element={<CategoryProduct />} />
         <Route path="/search" element={<Search />} />
         <Route path="/dashboard" element={<AdminRoute />}>
@@ -57,6 +58,7 @@ function App() {
           <Route path="admin/products" element={<Products />} />
           <Route path="admin/users" element={<Users />} />
           <Route path="admin/Messages" element={<Messages />} />
+          {/* <Route path="admin/favorite" element={<CartPage />} /> */}
           <Route path="admin/orders" element={<AdminOrders />} />
         </Route>
 
@@ -64,6 +66,7 @@ function App() {
           <Route path="user" element={<Dashboard />} />
           <Route path="user/orders" element={<Orders />} />
           <Route path="user/profile" element={<Profile />} />
+          <Route path="user/favorite" element={<UserFav />} />
         </Route>
         <Route path="/register" element={<Register />} />
         <Route path="/forget-password" element={<ForgetPassword />} />

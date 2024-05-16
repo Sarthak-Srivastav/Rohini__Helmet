@@ -54,6 +54,7 @@ app.listen(PORT, () => {
   );
 });
 
+//Gemini
 async function runChat(userInput) {
   const genAI = new GoogleGenerativeAI(API_KEY);
   const model = genAI.getGenerativeModel({ model: MODEL_NAME });

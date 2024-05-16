@@ -1,17 +1,20 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+import { FaRegUser } from "react-icons/fa";
+import { BsRobot } from "react-icons/bs";
+
 import "../../styles/chatbot.css";
 
 const WindowComponent = ({ onClose }) => {
   const [userInput, setUserInput] = useState("");
   const [chatHistory, setChatHistory] = useState(
-    JSON.parse(localStorage.getItem("chatHistory")) || []
+    JSON.parse(sessionStorage.getItem("chatHistory")) || []
   );
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem("chatHistory", JSON.stringify(chatHistory));
+    sessionStorage.setItem("chatHistory", JSON.stringify(chatHistory));
   }, [chatHistory]);
 
   const handleSubmit = async (e) => {
@@ -43,7 +46,17 @@ const WindowComponent = ({ onClose }) => {
             key={index}
             className={message.role === "user" ? "user-message" : "bot-message"}
           >
-            {message.text}
+            {message.role === "user" ? (
+              <div className="user-icon">
+                <FaRegUser />
+                <div className="message-text">{message.text}</div>
+              </div>
+            ) : (
+              <div className="bot-icon">
+                <BsRobot />
+                <div className="message-text">{message.text}</div>
+              </div>
+            )}
           </div>
         ))}
       </div>
