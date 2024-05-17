@@ -205,7 +205,7 @@ button.navbar-toggler {
   color: rgb(208, 0, 163);
 }
 .nav-link-2.dropdown-toggle.show {
-  color: #1d1d1d;
+  color: #9100f9;
 }
 
 .dropdown-menu.show {
@@ -226,6 +226,20 @@ button.navbar-toggler {
 }
 .dropdown-item.active {
   background-color: transparent;
+}
+
+.nav-icon{
+  text-decoration: none;
+  color: #1c1c1c;
+  margin-left: 30px;
+  transition: color 0.3s;
+}
+
+.nav-icon:hover {
+  color: rgb(208, 0, 163);
+}
+.nav-icon.active {
+  color: #9100f9;
 }
 
 /* .navbar-nav .nav-link.active{

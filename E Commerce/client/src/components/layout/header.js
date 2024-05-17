@@ -9,8 +9,12 @@ import useCategory from "../../hooks/useCategory";
 import { useCart } from "../../context/cart";
 import { Badge } from "antd";
 import { FaHome } from "react-icons/fa";
+import { RiDashboardFill } from "react-icons/ri";
+import { FiLogOut } from "react-icons/fi";
+import { MdCategory } from "react-icons/md";
 
 import { FiAlignJustify } from "react-icons/fi";
+import Dashboard from './../../pages/user/Dashboard';
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
@@ -95,12 +99,12 @@ const Header = () => {
                     to={"/categories"}
                     data-bs-toggle="dropdown"
                   >
-                    Categories
+                    <MdCategory /> Categories
                   </Link>
                   <ul className="dropdown-menu">
                     <li>
                       <Link className="dropdown-item" to={"/categories"}>
-                        All Categories
+                      All Categories
                       </Link>
                     </li>
                     {categories?.map((c) => (
@@ -143,17 +147,26 @@ const Header = () => {
                       >
                         {auth?.user?.name}
                       </NavLink>
+
+                      <NavLink
+                            to={`/dashboard/${
+                              auth?.user?.role === 1 ? "admin" : "user" // this condistion is to check either admin dashboard open or user dashboard ...
+                            }`}
+                            className="nav-icon"
+                          >
+                            <RiDashboardFill /> Dashboard
+                          </NavLink>
                       <ul className="dropdown-menu">
-                        <li>
+                        {/* <li>
                           <NavLink
                             to={`/dashboard/${
                               auth?.user?.role === 1 ? "admin" : "user" // this condistion is to check either admin dashboard open or user dashboard ...
                             }`}
                             className="dropdown-item"
                           >
-                            DashBoard
+                            <RiDashboardFill />
                           </NavLink>
-                        </li>
+                        </li> */}
 
                         <li>
                           <NavLink
@@ -161,7 +174,7 @@ const Header = () => {
                             to="/login"
                             className="dropdown-item"
                           >
-                            Logout
+                            <FiLogOut /> Logout
                           </NavLink>
                         </li>
                       </ul>
