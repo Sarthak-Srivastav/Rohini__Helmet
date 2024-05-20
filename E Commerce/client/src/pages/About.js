@@ -50,7 +50,7 @@ const About = () => {
           <p className="text-black text-justify mt-2">
             <b>QUALITY MATTERS : </b>
             <br />
-            Every Recipe On [Your Recipe Website Name] Undergoes Rigorous
+            Every Recipe On Flavor Fusion Undergoes Rigorous
             Testing And Refinement By Our Culinary Experts To Ensure That You
             Achieve Delicious Results Every Time You Cook.
           </p>
