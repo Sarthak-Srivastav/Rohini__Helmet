@@ -10,7 +10,7 @@ const ButtonComponent = ({ onClick }) => {
       onClick={onClick}
       style={{
         position: "fixed",
-        bottom: "50px",
+        bottom: "100px",
         right: "100px",
         zIndex: "1000",
       }}
