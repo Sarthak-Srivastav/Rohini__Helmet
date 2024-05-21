@@ -1112,54 +1112,115 @@ img {
 }
 */
 
-.tip-of-the-day {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #eaf0f1;
-  border-radius: 20px;
-  padding: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.tip-of-the-day{
+  margin-left:30px ;
 }
-
-.tip-content {
-  flex: 1;
-}
-
-.tip-of-the-day h2 {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  color: #2c3e50;
-}
-
-.tip-of-the-day p {
+.tip-content{
   font-size: 18px;
-  color: #34495e;
-  margin: 0;
-  margin-left: 20px;
+  font-weight: 400;
 }
-
-.next-tip-button {
-  padding: 10px 15px;
-  background-color: #3498db;
+.glitter-button {
+  position: relative;
+  padding: 10px 20px;
+  background-color: #000000;
+  border-radius: 6px;
   color: white;
   border: none;
-  border-radius: 50%;
-  cursor: pointer;
   font-size: 18px;
-  margin-left: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
 }
 
-.next-tip-button:hover {
-  background-color: #2980b9;
+.glitter-button:active{
+  transform: scale(0.96);
 }
+
+.glitter-button .button-content {
+    display: flex;
+    align-items: center;
+}
+
+.glitter-button::before,
+.glitter-button::after{
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-40%);
+  height: 100%;
+  width: 150%;
+  z-index: -1;
+  background-repeat: no-repeat;
+}
+.glitter-button.animate::before{
+  top: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+  radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+  radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+  radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+  radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+  radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+  radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+  radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,10% 10%, 18% 18%;
+  background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+   40% 90%, 55% 90%, 70% 90%;
+  animation: topBubbles 0.6s ease-in-out infinite;
+}
+@keyframes topBubbles {
+  50%{
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100%{
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% 10%, 30% 20%, 22% 40%, 
+      50% 40%, 65% 10%, 90% 20%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,0% 0%, 0% 0%;
+  }
+  }
+.glitter-button.animate::after{
+  bottom: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+  radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+  radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+  radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+  radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+  radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+  radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 10% 0%, 30% 10%, 55% 0%, 70% 0%, 85% 0%, 70% 0%, 70% 0%;
+  animation: bottomBubbles 0.6s ease-in-out infinite;
+}
+@keyframes bottomBubbles {
+  50%{
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100%{
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 
+      110% 10%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+  }
+/* @keyframes glitter {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(10px) translateY(10px);
+  }
+} 
+
+
+.glitter-button.active::before {
+  opacity: 1;
+} */
+
 
 .image-slider img {
   display: flex;
   margin: 0 auto;
-  padding: 10px;
+  /* padding: 10px; */
   object-fit: cover;
   border-radius: 50px;
 } 

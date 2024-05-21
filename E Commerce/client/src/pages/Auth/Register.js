@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import { FaEye } from "react-icons/fa6";
+import { FaEyeSlash } from "react-icons/fa6";
 // import "../../styles/AuthStyles.css";
 import "../../styles/register-style.css";
 import Layout2 from "../../components/layout/layout2";
@@ -14,6 +16,7 @@ const Register = () => {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const [answer, setAnswer] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   // form function
@@ -172,7 +175,7 @@ const Register = () => {
                   </div>
                   <div className="inputBox">
                     <input
-                      type="password"
+                      type={showPassword ? "text" : "password"} 
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       className="form-control"
@@ -181,6 +184,13 @@ const Register = () => {
                       required
                       autocomplete="off"
                     />
+                    <div className="toggle-icon-container">
+                  {showPassword ? (
+                    <FaEyeSlash className="password-toggle-icon" onClick={() => setShowPassword(false)} />
+                  ) : (
+                    <FaEye className="password-toggle-icon" onClick={() => setShowPassword(true)} />
+                  )}
+                </div>
                   </div>
                   <div className="inputBox">
                     <input

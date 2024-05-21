@@ -5,12 +5,15 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 // import "../../styles/AuthStyles.css";
 import "../../styles/login-forget.css";
+import { FaEye } from "react-icons/fa6";
+import { FaEyeSlash } from "react-icons/fa6";
 import Layout2 from "../../components/layout/layout2";
 
 const ForgetPassword = () => {
   const [email, setEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [answer, setAnswer] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   const navigate = useNavigate();
 
@@ -137,7 +140,7 @@ const ForgetPassword = () => {
                   </div>
                   <div className="inputBox">
                     <input
-                      type="password"
+                      type={showPassword ? "text" : "password"} 
                       value={newPassword}
                       onChange={(e) => setNewPassword(e.target.value)}
                       className="form-control"
@@ -146,6 +149,13 @@ const ForgetPassword = () => {
                       required
                       autocomplete="off"
                     />
+                    <div className="toggle-icon-container">
+                    {showPassword ? (
+                      <FaEyeSlash className="password-toggle-icon" onClick={() => setShowPassword(false)} />
+                    ) : (
+                      <FaEye className="password-toggle-icon" onClick={() => setShowPassword(true)} />
+                    )}
+                    </div>
                   </div>
 
                   <div class="inputBox">

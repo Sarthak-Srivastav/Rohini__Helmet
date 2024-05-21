@@ -7,12 +7,15 @@ import toast from "react-hot-toast";
 import "../../styles/login-forget.css";
 // import backgroundImage from "../../image/black-bg.jpg";
 
+import { FaEye } from "react-icons/fa6";
+import { FaEyeSlash } from "react-icons/fa6";
 import { useAuth } from "../../context/Auth";
 import Layout2 from "../../components/layout/layout2";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [auth, setAuth] = useAuth();
 
   const navigate = useNavigate();
@@ -153,17 +156,26 @@ const Login = () => {
                   />
                 </div>
                 <div className="inputBox">
-                  <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    className="form-control"
-                    id="exampleInputPassword1"
-                    placeholder="Enter Your Password"
-                    required
-                    autoComplete="off"
-                  />
+                <input
+                  type={showPassword ? "text" : "password"} 
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Enter Your Password"
+                  required
+                  autoComplete="off"
+                />
+                
+                <div className="toggle-icon-container">
+                  {showPassword ? (
+                    <FaEyeSlash className="password-toggle-icon" onClick={() => setShowPassword(false)} />
+                  ) : (
+                    <FaEye className="password-toggle-icon" onClick={() => setShowPassword(true)} />
+                  )}
                 </div>
+              </div>
+
 
                 <div className="inputBox">
                   <input type="submit" value="Login" />

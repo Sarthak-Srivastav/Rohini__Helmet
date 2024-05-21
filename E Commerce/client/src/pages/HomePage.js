@@ -11,7 +11,7 @@ import { toast } from "react-hot-toast";
 import "../styles/filters.css";
 import ImageSlider from "../components/layout/imageSlider";
 import { cookingTips } from "../pages/tips";
-import { IoMdRefresh } from "react-icons/io";
+import { MdTipsAndUpdates } from "react-icons/md";
 
 import img1 from "../image/1111.jpg";
 import img2 from "../image/1112.jpg";
@@ -138,13 +138,22 @@ const HomePage = () => {
   return (
     <Layout title={"All Recipes"}>
       <div className="tip-of-the-day">
+          <button
+          className="glitter-button"
+          onClick={(e) => {
+            getNextTip();
+            const button = e.target;
+            button.classList.add('animate');
+            setTimeout(() => {
+              button.classList.remove('animate');
+            }, 600); 
+          }}
+        >
+         <MdTipsAndUpdates /> Show Cooking Tip
+        </button>
         <div className="tip-content">
-          <h2>Cooking Tip of the Day</h2>
           <p>{tipOfTheDay}</p>
         </div>
-        <button className="next-tip-button" onClick={getNextTip}>
-          <IoMdRefresh />
-        </button>
       </div>
 
       <div className="App">
