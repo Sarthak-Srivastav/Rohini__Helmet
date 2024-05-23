@@ -82,7 +82,7 @@ font-family: 'Roboto Slab', serif; */
 .navbar {
   /* font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; */
   /* background-color: black; */
-  width: 60%;
+  width: fit-content;
   margin: 0 auto; /* This centers the navbar horizontally */
   border-radius: 25px;
   font-family: var(--font-default);

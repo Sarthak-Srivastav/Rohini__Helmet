@@ -32,8 +32,8 @@
   text-align: left;
 margin: 0;
   /* background-color: #120202; */
-  background-color: #030f1f;
-  color: white;
+  background-color: #dcdcdc;
+  color: #000000;
   border: none;
   border-radius: 30px;
   padding: 10px 20px;
@@ -53,8 +53,8 @@ margin: 0;
   border-radius: 100px;
   /* background-color: #127dc4; */
   /* background-color: #1de90a; */
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #ff7a7a;
+  color: #ffffff;
   font-weight: Bold;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
@@ -62,8 +62,9 @@ margin: 0;
 
 .CreateBtn:hover {
   /* background-color: #6fc5ff; */
-  background-color: #8bef82;
+  background-color: #4fe742;
   box-shadow: 0 0 20px #66ff735d;
+  color: #000000;
   transform: scale(1.1);
 }
 
@@ -88,13 +89,13 @@ margin: 0;
 
   border: none;
   outline: none;
-  caret-color: rgba(255, 255, 255, 0.945);
+  caret-color: rgba(16, 16, 16, 0.945);
   /* background-color: #120202; */
-  background-color: #030f1f;
+  background-color: #dcdcdc;
   border-radius: 30px;
   padding-left: 15px;
   letter-spacing: 0.8px;
-  color: #fff;
+  color: #000000;
 }
 
 /* Customize select elements */
@@ -104,13 +105,13 @@ margin: 0;
   padding: 10px;
   margin: 5px 0;
   width: 100%;
-  background-color: #030f1f;
+  background-color: #dcdcdc;
 }
 
 .form-select .ant-select-selection-placeholder,
 .form-select .ant-select-selection-selected-value,
 .form-select .ant-select-selection-item {
-  color: #969696 !important; /* Change the color as per your preference */
+  color: #4d4d4d !important; /* Change the color as per your preference */
   font-weight: bold !important; /* Add other text styles as needed */
 }
 
@@ -126,7 +127,7 @@ margin: 0;
 }
 .CreateProduct ::placeholder {
   font-size: large;
-  color: #969696;
+  color: #4d4d4d;
   padding-left: 10px;
 }
 

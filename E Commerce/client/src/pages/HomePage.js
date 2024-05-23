@@ -72,7 +72,7 @@ const HomePage = () => {
       setLoading(true);
       const { data } = await axios.get(`/api/v1/product/product-list/${page}`);
       setLoading(false);
-      setProducts(data.products);
+      setProducts((prevProducts) => [...prevProducts, ...data.products]);
     } catch (error) {
       setLoading(false);
       console.log(error);
@@ -89,21 +89,8 @@ const HomePage = () => {
   };
 
   useEffect(() => {
-    if (page === 1) return;
-    loadMore();
+    getAllProducts();
   }, [page]);
-
-  const loadMore = async () => {
-    try {
-      setLoading(true);
-      const { data } = await axios.get(`/api/v1/product/product-list/${page}`);
-      setLoading(false);
-      setProducts([...products, ...data?.products]);
-    } catch (error) {
-      console.log(error);
-      setLoading(false);
-    }
-  };
 
   const handleFilter = (value, id) => {
     let all = [...checked];
@@ -135,21 +122,33 @@ const HomePage = () => {
     }
   };
 
+  const handleScroll = () => {
+    const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
+    if (scrollTop + clientHeight >= scrollHeight - 20) {
+      setPage((prevPage) => prevPage + 1);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <Layout title={"All Recipes"}>
       <div className="tip-of-the-day">
-          <button
+        <button
           className="glitter-button"
           onClick={(e) => {
             getNextTip();
             const button = e.target;
-            button.classList.add('animate');
+            button.classList.add("animate");
             setTimeout(() => {
-              button.classList.remove('animate');
-            }, 600); 
+              button.classList.remove("animate");
+            }, 600);
           }}
         >
-         <MdTipsAndUpdates /> Show Cooking Tip
+          <MdTipsAndUpdates /> Show Cooking Tip
         </button>
         <div className="tip-content">
           <p>{tipOfTheDay}</p>
@@ -257,10 +256,7 @@ const HomePage = () => {
               {products && products.length < total && (
                 <button
                   className="btn btn-warning load-more-button"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setPage(page + 1);
-                  }}
+                  onClick={() => setPage(page + 1)}
                 >
                   {loading ? "Loading ..." : "Load More"}
                 </button>

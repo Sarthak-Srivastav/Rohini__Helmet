@@ -34,7 +34,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg ">
         <div className="container-fluid">
           <button
-            style={{ color: "white" }}
+            style={{ color: "black" }}
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
