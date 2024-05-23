@@ -3,18 +3,17 @@ import axios from "axios";
 import chatbot from "../../image/bot.png";
 import user from "../../image/user.png";
 
-
 import "../../styles/chatbot.css";
 
 const WindowComponent = ({ onClose }) => {
   const [userInput, setUserInput] = useState("");
   const [chatHistory, setChatHistory] = useState(
-    JSON.parse(localStorage.getItem("chatHistory")) || []
+    JSON.parse(sessionStorage.getItem("chatHistory")) || []
   );
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem("chatHistory", JSON.stringify(chatHistory));
+    sessionStorage.setItem("chatHistory", JSON.stringify(chatHistory));
   }, [chatHistory]);
 
   const handleSubmit = async (e) => {

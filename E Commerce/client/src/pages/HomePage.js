@@ -22,11 +22,19 @@ import img6 from "../image/1116.jpg";
 
 const images = [img1, img2, img3, img4, img5, img6];
 
+const shuffleArray = (array) => {
+  return array
+    .map((value) => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+};
+
 const HomePage = () => {
   const navigate = useNavigate();
   const [cart, setCart] = useCart();
   const [auth, setAuth] = useAuth();
   const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [checked, setChecked] = useState([]);
   const [radio, setRadio] = useState([]);
@@ -72,7 +80,10 @@ const HomePage = () => {
       setLoading(true);
       const { data } = await axios.get(`/api/v1/product/product-list/${page}`);
       setLoading(false);
-      setProducts((prevProducts) => [...prevProducts, ...data.products]);
+      setProducts((prevProducts) => [
+        ...prevProducts,
+        ...shuffleArray(data.products),
+      ]);
     } catch (error) {
       setLoading(false);
       console.log(error);
@@ -92,6 +103,14 @@ const HomePage = () => {
     getAllProducts();
   }, [page]);
 
+  useEffect(() => {
+    if (!checked.length && !radio.length) {
+      setFilteredProducts(products);
+    } else {
+      filterProduct();
+    }
+  }, [products, checked, radio]);
+
   const handleFilter = (value, id) => {
     let all = [...checked];
     if (value) {
@@ -102,21 +121,13 @@ const HomePage = () => {
     setChecked(all);
   };
 
-  useEffect(() => {
-    if (!checked.length || !radio.length) getAllProducts();
-  }, [checked.length, radio.length]);
-
-  useEffect(() => {
-    if (checked.length || radio.length) filterProduct();
-  }, [checked, radio]);
-
   const filterProduct = async () => {
     try {
       const { data } = await axios.post("/api/v1/product/product-filters", {
         checked,
         radio,
       });
-      setProducts(data?.products);
+      setFilteredProducts(data?.products);
     } catch (error) {
       console.log(error);
     }
@@ -212,7 +223,7 @@ const HomePage = () => {
           <div className="col-md-10">
             <h2 className="section-title">RECIPES</h2>
             <div className="d-flex flex-wrap justify-content-around">
-              {products?.map((p) => (
+              {filteredProducts?.map((p) => (
                 <div className="card-1" key={p._id}>
                   <div className="product-image-container">
                     <img
@@ -253,7 +264,7 @@ const HomePage = () => {
             </div>
 
             <div className="m-2 p-3 text-center">
-              {products && products.length < total && (
+              {filteredProducts && filteredProducts.length < total && (
                 <button
                   className="btn btn-warning load-more-button"
                   onClick={() => setPage(page + 1)}
