@@ -338,7 +338,7 @@ slider-container {
 }
 
 /*==============Loadmore==============*/
-#loadmore {
+.load-more-button {
   background-color: #232323;
   color: #ff66f0;
   display: flex;
@@ -347,7 +347,7 @@ slider-container {
   text-transform: uppercase;
   border: none;
 }
-#loadmore:hover {
+.load-more-button:hover {
   background-color: #232323;
   color: #ffe9fd;
   transform: scale(1.05);
