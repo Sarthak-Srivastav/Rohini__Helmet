@@ -14,7 +14,7 @@ import { FiLogOut } from "react-icons/fi";
 import { MdCategory } from "react-icons/md";
 
 import { FiAlignJustify } from "react-icons/fi";
-import Dashboard from './../../pages/user/Dashboard';
+import Dashboard from "./../../pages/user/Dashboard";
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
@@ -89,8 +89,7 @@ const Header = () => {
                     aria-current="page"
                     href="#"
                   >
-                    <FaHome />  Home
-                    
+                    <FaHome /> Home
                   </NavLink>
                 </li>
                 <li className="nav-item dropdown">
@@ -104,7 +103,7 @@ const Header = () => {
                   <ul className="dropdown-menu">
                     <li>
                       <Link className="dropdown-item" to={"/categories"}>
-                      All Categories
+                        All Categories
                       </Link>
                     </li>
                     {categories?.map((c) => (
@@ -149,13 +148,13 @@ const Header = () => {
                       </NavLink>
 
                       <NavLink
-                            to={`/dashboard/${
-                              auth?.user?.role === 1 ? "admin" : "user" // this condistion is to check either admin dashboard open or user dashboard ...
-                            }`}
-                            className="nav-icon"
-                          >
-                            <RiDashboardFill /> Dashboard
-                          </NavLink>
+                        to={`/dashboard/${
+                          auth?.user?.role === 1 ? "admin" : "user" // this condistion is to check either admin dashboard open or user dashboard ...
+                        }`}
+                        className="nav-icon"
+                      >
+                        <RiDashboardFill /> Dashboard
+                      </NavLink>
                       <ul className="dropdown-menu">
                         {/* <li>
                           <NavLink

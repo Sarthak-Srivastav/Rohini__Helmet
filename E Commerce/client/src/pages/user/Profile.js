@@ -14,13 +14,13 @@ const Profile = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
+  // const [address, setAddress] = useState("");
 
   //get user data
   useEffect(() => {
-    const { email, name, address, phone } = auth?.user;
+    const { email, name, phone } = auth?.user;
     setName(name);
-    setAddress(address);
+    // setAddress(address);
     setEmail(email);
     setPhone(phone);
   }, [auth?.user]);
@@ -34,7 +34,7 @@ const Profile = () => {
         email,
         password,
         phone,
-        address,
+        // address,
       });
       if (data?.error) {
         toast.error("data?.error");
@@ -128,7 +128,7 @@ const Profile = () => {
                             autoComplete="off"
                           />
                         </div>
-                        <div className="inputBox">
+                        {/* <div className="inputBox">
                           <input
                             type="text"
                             value={address}
@@ -138,7 +138,7 @@ const Profile = () => {
                             placeholder="Enter Your Address"
                             autoComplete="off"
                           />
-                        </div>
+                        </div> */}
 
                         <div className="inputBox">
                           <input type="submit" value="UPDATE" />

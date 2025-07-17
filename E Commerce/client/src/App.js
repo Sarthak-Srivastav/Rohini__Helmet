@@ -37,12 +37,12 @@ function App() {
   const toggleWindow = () => {
     setShowWindow(!showWindow);
   };
-  return (
+  return (  
     <>
-      <div>
+      {/* <div>
         <ButtonComponent onClick={toggleWindow} />
         {showWindow && <WindowComponent />}
-      </div>
+      </div> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/product/:slug" element={<ProductDetails />} />

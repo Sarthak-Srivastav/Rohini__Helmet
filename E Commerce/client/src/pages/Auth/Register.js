@@ -14,7 +14,7 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
+  // const [address, setAddress] = useState("");
   const [answer, setAnswer] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
@@ -28,7 +28,7 @@ const Register = () => {
         email,
         password,
         phone,
-        address,
+        // address,
         answer,
       });
       if (res && res.data.success) {
@@ -42,7 +42,7 @@ const Register = () => {
       toast.error("Something went wrong");
     }
   };
-/*
+  /*
     return (
       <Layout title="Register - Ecommer App">
         <div className="form-container ">
@@ -175,7 +175,7 @@ const Register = () => {
                   </div>
                   <div className="inputBox">
                     <input
-                      type={showPassword ? "text" : "password"} 
+                      type={showPassword ? "text" : "password"}
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
                       className="form-control"
@@ -185,12 +185,18 @@ const Register = () => {
                       autocomplete="off"
                     />
                     <div className="toggle-icon-container">
-                  {showPassword ? (
-                    <FaEyeSlash className="password-toggle-icon" onClick={() => setShowPassword(false)} />
-                  ) : (
-                    <FaEye className="password-toggle-icon" onClick={() => setShowPassword(true)} />
-                  )}
-                </div>
+                      {showPassword ? (
+                        <FaEyeSlash
+                          className="password-toggle-icon"
+                          onClick={() => setShowPassword(false)}
+                        />
+                      ) : (
+                        <FaEye
+                          className="password-toggle-icon"
+                          onClick={() => setShowPassword(true)}
+                        />
+                      )}
+                    </div>
                   </div>
                   <div className="inputBox">
                     <input
@@ -204,7 +210,7 @@ const Register = () => {
                       autocomplete="off"
                     />
                   </div>
-                  <div className="inputBox">
+                  {/* <div className="inputBox">
                     <input
                       type="text"
                       value={address}
@@ -215,7 +221,7 @@ const Register = () => {
                       required
                       autocomplete="off"
                     />
-                  </div>
+                  </div> */}
                   <div className="inputBox">
                     <input
                       type="text"

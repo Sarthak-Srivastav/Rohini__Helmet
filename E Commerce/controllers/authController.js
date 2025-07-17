@@ -6,7 +6,7 @@ import ContactUsModel from "../models/ContactUsModel.js";
 
 export const registerController = async (req, res) => {
   try {
-    const { name, email, password, phone, address, answer } = req.body;
+    const { name, email, password, phone, answer } = req.body;
 
     //Validations
     if (!name) {
@@ -58,9 +58,9 @@ export const registerController = async (req, res) => {
       return res.send({ message: "Phone number should be 10 digits" });
     }
 
-    if (!address) {
-      return res.send({ message: "Address is required" });
-    }
+    // if (!address) {
+    //   return res.send({ message: "Address is required" });
+    // }
 
     if (!answer) {
       return res.send({ message: "Answer is required" });
@@ -82,7 +82,6 @@ export const registerController = async (req, res) => {
       name,
       email,
       phone,
-      address,
       password: hashedPassword,
       answer,
     }).save();
@@ -139,7 +138,7 @@ export const loginController = async (req, res) => {
         name: user.name,
         email: user.email,
         phone: user.phone,
-        address: user.address,
+        // address: user.address,
         role: user.role,
       },
       token,
@@ -243,7 +242,7 @@ export const testController = (req, res) => {
 
 export const updateProfileController = async (req, res) => {
   try {
-    const { name, email, password, address, phone } = req.body;
+    const { name, email, password, phone } = req.body;
     const user = await userModel.findById(req.user._id);
 
     // Password
@@ -263,7 +262,7 @@ export const updateProfileController = async (req, res) => {
       name: name || user.name,
       password: hashedPassword || user.password,
       phone: phone || user.phone,
-      address: address || user.address,
+      // address: address || user.address,
     };
 
     const updatedUser = await userModel.findByIdAndUpdate(
